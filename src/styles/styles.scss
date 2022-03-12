@@ -57,6 +57,7 @@ a{
         border-color: #000;
         border-radius: 12px;
         background: #fff;
+        color: #000 !important;
         padding: 8px 0 8px 0;
         text-indent: 12px;
         line-height: 1.125em;
@@ -65,7 +66,7 @@ a{
         -webkit-appearance: none;
         appearance: none;
         option{
-          color:#000;
+          color: #000 !important;
         }
         &:hover,&:focus,&:active{
           outline: #ccc dotted 2px;
