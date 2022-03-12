@@ -1,6 +1,6 @@
 # One print a week • Une image par semaine
 
-voir le site → [https://oneprint.anem.name](oneprint.anem.name)
+voir le site → [oneprint.anem.name](https://oneprint.anem.name)
 
 1printaweek est un projet mené sur l’année 2022,
 <br/>il débute en février et s’achèvera l’année prochaine.
@@ -40,21 +40,26 @@ abordables et disponibles simplement en m’écrivant un mail.
 
 ### Éditer les contenus
 
-Il faut éditer [./contents](les documents) au format **MarkDown** 
+Il faut éditer [les documents](./contents) au format **MarkDown** 
 avec l'extension `.md` qui son situé dans le dossier `/contents`
 
-Les images sont dans le dossier `/contents/images`
+Le texte d'[introduction est le fichier `index.md`](./contents/index.md)
+
+[Les images](./contents/images) sont dans le dossier `/contents/images`
 
 Il faut remplir la partie `frontmatter` pour les meta-données de chaque article : 
 - `title` titre en français
 - `title_en` titre en anglais (optionnel)
+- `week` numéro de la semaine
 - `date` date de début au format `YYYY-MM-DD`
 - `date_to` date de fin au format `YYYY-MM-DD`
 - `instagram` lien vers un post instagram
-- `images` tableau des images en fin d'article
+- `images` liste des images, 
+entre crochets et séparées par des virgules. 
+par exemple `[images/001-1.jpg,images/001-2.jpg]`
 
 Les images sont ajustées sur une grille de 12 colonnes. 
-La taille de l'image affecte la dimension de la colonne.  
+La taille de l'image affecte la dimension de la colonne.
 La taille de référence de la grille est de `1920px` — 
 une image mesurant `1920px` fera 100% de la largeur du bloc.
 une colonne fait `160px` — et donc par exemple 6 colonnes `960px`
