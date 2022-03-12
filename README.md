@@ -40,7 +40,7 @@ abordables et disponibles simplement en m’écrivant un mail.
 
 ### Éditer les contenus
 
-Il faut éditer [/contents](les documents) au format **MarkDown** 
+Il faut éditer [./contents](les documents) au format **MarkDown** 
 avec l'extension `.md` qui son situé dans le dossier `/contents`
 
 Les images sont dans le dossier `/contents/images`
