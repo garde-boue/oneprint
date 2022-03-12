@@ -28,10 +28,10 @@ module.exports = {
   }, {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/content`,
+        name: `contents`,
+        path: `${__dirname}/src/contents`,
       },
-      __key: "content"
+      __key: "contents"
     },
   ]
 };

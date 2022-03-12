@@ -21,7 +21,6 @@ exports.createPages = async ({graphql, actions}) => {
     results.data.prints.nodes.forEach(print=>{
         const {id} = print
         const {week} = print.frontmatter
-        console.log('print',week,id);
         createPage({
             path: `/week/${week}`,
             component: PrintPage,
