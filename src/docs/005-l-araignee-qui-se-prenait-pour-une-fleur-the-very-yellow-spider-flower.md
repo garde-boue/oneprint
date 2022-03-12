@@ -3,7 +3,7 @@ title: L’araignée qui se prenait pour une fleur • The very yellow spider fl
 week: 5
 date: 2022-02-28
 date_to: 2022-03-06
-images: []
+images: [images/005-1.png,images/005-2.png]
 ---
 Sérigraphie deux passages sur rivoli 230g, format 29,7x42 cm, 15 exemplaires.
 
