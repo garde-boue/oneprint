@@ -18,7 +18,6 @@ exports.createPages = async ({graphql, actions}) => {
   }
 }
     `)
-    console.log(results)
     results.data.prints.nodes.forEach(print=>{
         const {id} = print
         const {week} = print.frontmatter
