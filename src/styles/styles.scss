@@ -1,0 +1,113 @@
+@use "sass:math";
+@import "https://www.cnap.fr/sites/faune/styles/faune-fontes.css";
+
+html, body{
+  font-family: 'Faune', sans-serif;
+  font-size: 16px;
+  line-height: 1.125em;
+  padding: 0;
+  margin: 0;
+}
+
+main{
+  box-sizing: border-box;
+  width: 68em;
+  padding: 3em;
+  max-width: 100%;
+  margin: auto;
+}
+
+a{
+  color:inherit;
+}
+
+.intro{
+  min-height: 50vh;
+  padding: 0 0 3em;
+  &__title{
+    font-weight: 900;
+    font-size:1em;
+    margin: 0 0 #{2*1.125em};
+  }
+  p{
+    font-weight: 900;
+    margin: 0;
+  }
+}
+
+.print{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-weight: 900;
+  box-sizing: border-box;
+  padding-top: 30vh;
+  p{
+    margin: 0;
+  }
+  blockquote{
+    font-weight: normal;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+  }
+  &__week{
+    margin: 1.5em 0 0 0;
+  }
+  &__images{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5em -1.5em 0;
+  }
+  &__image{
+    display: flex;
+    padding: 1.5em 1.5em 1.5em;
+    box-sizing: border-box;
+    @for $i from 1 through 12{
+      &--#{$i}{
+        width: percentage(math.div($i,12));
+      }
+    }
+    .gatsby-image-wrapper{
+      display: flex;
+      > div{
+        margin: auto 0 0 0;
+      }
+      [data-main-image]{
+        max-width: 100%;
+        height:auto;
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+}
+
+.footer{
+  padding: 30vh 0 0;
+  font-style: italic;
+  strong, a{
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  main{
+    padding: 1.5em;
+  }
+  .print {
+    &__images {
+      margin: .75em -.75em;
+    }
+    &__image{
+      padding: .75em .75em .75em;
+      width: 100%;
+      @for $i from 1 through 6{
+        &--#{$i}{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
