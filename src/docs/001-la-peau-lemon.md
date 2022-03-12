@@ -1,6 +1,6 @@
 ---
 title: La peau LEMON
-week: 1
+week: -1
 date: 2022-02-01
 date_to: 2022-02-06
 images: [images/001-1.png,images/001-2.png] 
