@@ -26,18 +26,12 @@ module.exports = {
     },
     __key: "images"
   }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/docs/"
-    },
-    __key: "pages"
-  }, {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `docs`,
-        path: `${__dirname}/src/docs`,
+        name: `content`,
+        path: `${__dirname}/content`,
       },
+      __key: "content"
     },
   ]
 };
