@@ -18,7 +18,7 @@ const Print = ({print, mode='block'})=>{
     const date_to_parts = date_to.split(' ')
     const date_from_auto = date_from_parts[1] === date_to_parts[1] ? date_from_parts[0] : date_from;
     const title_elements = <>
-        {title && <span className="print__title">{title} </span>}
+        {title && <span className="print__title print__title--fr">{title} </span>}
         {title_en && <span className="print__title print__title--en" lang={"en"}>{title_en} </span>}
     </>
     return <article className={"print"} data-week={week}>

@@ -60,10 +60,13 @@ a{
         padding: 8px 0 8px 0;
         text-indent: 12px;
         line-height: 1.125em;
-        margin: -9px 0 -10px 0;
+        margin: -9px 0 -10px 1em;
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
+        option{
+          color:#000;
+        }
         &:hover,&:focus,&:active{
           outline: #ccc dotted 2px;
           outline-offset: 8px;
@@ -133,10 +136,10 @@ a{
   }
   &__title{
     display: inline-flex;
+    margin: 0 .25em 0 0;
     & + &--en{
       font-style: italic;
       font-weight: normal;
-      margin: 0 0 0 .25em;
     }
   }
   &__week{
@@ -204,6 +207,15 @@ a{
   .layout{
     padding: 1.5em;
   }
+  .footer{
+    p{
+      display: flex;
+      flex-direction: column;
+      br{
+        display: none;
+      }
+    }
+  }
   .print {
     &__images {
       margin: .75em -.75em;
@@ -214,6 +226,17 @@ a{
       @for $i from 1 through 6{
         &--#{$i}{
           width: 50%;
+        }
+      }
+    }
+  }
+  .intro{
+    &__title{
+      .week-selector{
+        select{
+          &,&:focus,&:hover,&:active{
+            outline: none;
+          }
         }
       }
     }
