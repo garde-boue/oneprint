@@ -13,7 +13,7 @@ const PrintPage = ({data}) => {
     return (
         <div className={"page page--print"}>
             <Helmet>
-                <title>{meta_title} • one print a week</title>
+                <title>{week} • {meta_title} • one print a week</title>
             </Helmet>
             <Print print={print} mode={"page"} />
         </div>

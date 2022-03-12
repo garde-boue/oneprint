@@ -11,7 +11,7 @@ const IndexPage = ({data}) => {
   return (
     <div className={"page"}>
         <Helmet>
-            <title>{title}</title>
+            <title>{title} • Anne-Émilie Philippe</title>
         </Helmet>
         <main className="intro">
             <div className={"intro__content"} dangerouslySetInnerHTML={{__html:html}} />
