@@ -13,7 +13,7 @@ const PrintImage = ({image, title})=>{
 const Print = ({print, mode='block'})=>{
     const isBlock = mode ==='block';
     const {frontmatter={}, html=''} = print
-    const {week, date_from, date_to, title, images=[], instagram, title_en} = frontmatter
+    const {week=0, date_from='', date_to='', title='', images=[], instagram='', title_en=''} = frontmatter
     const date_from_parts = date_from.split(' ')
     const date_to_parts = date_to.split(' ')
     const date_from_auto = date_from_parts[1] === date_to_parts[1] ? date_from_parts[0] : date_from;

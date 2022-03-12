@@ -8,12 +8,12 @@ import Footer from "../components/Footer";
 // markup
 const PrintPage = ({data}) => {
     const {print} = data
-    const {title='', title_en=''} = print.frontmatter
+    const {title='', title_en='', week=''} = print.frontmatter;
     const meta_title = [title,title_en].filter(t=>!!t).join(' • ');
     return (
         <div className={"page page--print"}>
             <Helmet>
-                <title>{week} • {meta_title} • one print a week</title>
+                <title>{week.toString()} • {meta_title} • one print a week</title>
             </Helmet>
             <Print print={print} mode={"page"} />
         </div>
