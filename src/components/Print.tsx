@@ -21,7 +21,7 @@ const Print = ({print, mode='block'})=>{
         {title && <span className="print__title">{title} </span>}
         {title_en && <span className="print__title print__title--en" lang={"en"}>{title_en} </span>}
     </>
-    return <article className={"print"}>
+    return <article className={"print"} data-week={week}>
         <div className="print__week">Semaine {week} </div>
         <div className="print__date">du {date_from_auto} au {date_to} </div>
         {isBlock ?

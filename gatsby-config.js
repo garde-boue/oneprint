@@ -1,8 +1,8 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-      title: `new`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `One print a week • Une image par semaine`,
+    siteUrl: `https://oneprint.anem.name`
   },
   plugins: [
     'gatsby-plugin-netlify',
@@ -16,20 +16,20 @@ module.exports = {
     {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": `${__dirname}/src/images/icon.png`
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": `${__dirname}/src/images/`
     },
     __key: "images"
   }, {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `contents`,
-        path: `${__dirname}/src/contents`,
+        path: `${__dirname}/contents`,
       },
       __key: "contents"
     },

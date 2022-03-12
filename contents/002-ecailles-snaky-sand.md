@@ -4,7 +4,7 @@ title_en: Snaky sand
 week: 2
 date: 2022-02-07
 date_to: 2022-02-13
-images: [images/002.png]
+images: [images/002.jpg]
 ---
 Impression laser sur papier doré.
 
