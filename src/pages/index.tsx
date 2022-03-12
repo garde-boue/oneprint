@@ -37,7 +37,10 @@ export const pageQuery = graphql`
             }
             html
         }
-        prints:allMarkdownRemark(filter: {frontmatter: {week: {gt: 0}}}) {
+        prints:allMarkdownRemark(
+            filter: {frontmatter: {week: {gt: 0}}}
+            sort: {fields: frontmatter___week, order: ASC}
+        ) {
             nodes {
                 html
                 frontmatter {

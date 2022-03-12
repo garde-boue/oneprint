@@ -3,7 +3,7 @@ title: Écailles • Snaky sand
 week: 2
 date: 2022-02-07
 date_to: 2022-02-13
-images: []
+images: [images/002.png]
 ---
 Impression laser sur papier doré.
 
