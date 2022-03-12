@@ -129,9 +129,11 @@ a{
   &__titles{
     margin: 0 0 1.125em;
     text-decoration: none;
-    &:hover{
-      span{
-        color:#666;
+    &--link{
+      &:hover{
+        span{
+          color:#666;
+        }
       }
     }
   }

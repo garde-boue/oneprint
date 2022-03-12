@@ -25,7 +25,7 @@ const Print = ({print, mode='block'})=>{
         <div className="print__week">Semaine {week} </div>
         <div className="print__date">du {date_from_auto} au {date_to} </div>
         {isBlock ?
-            <Link className={"print__titles"} to={`/week/${week}`}>{title_elements}</Link>:
+            <Link className={"print__titles print__titles--link"} to={`/week/${week}`}>{title_elements}</Link>:
             <div className={"print__titles"}>{title_elements}</div>
         }
         <div className="print__content" dangerouslySetInnerHTML={{__html:html}} />
