@@ -1,5 +1,6 @@
 ---
-title: L’araignée qui se prenait pour une fleur • The very yellow spider flower
+title: L’araignée qui se prenait pour une fleur 
+title_en: The very yellow spider flower
 week: 5
 date: 2022-02-28
 date_to: 2022-03-06

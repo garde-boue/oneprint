@@ -1,5 +1,6 @@
 ---
-title: Écailles • Snaky sand
+title: Écailles 
+title_en: Snaky sand
 week: 2
 date: 2022-02-07
 date_to: 2022-02-13

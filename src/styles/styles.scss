@@ -9,7 +9,12 @@ html, body{
   margin: 0;
 }
 
-main{
+::selection{
+  background: #ccc;
+  color:#999;
+}
+
+.layout{
   box-sizing: border-box;
   width: 68em;
   padding: 3em;
@@ -25,13 +30,26 @@ a{
   min-height: 50vh;
   padding: 0 0 3em;
   &__title{
+    display: block;
     font-weight: 900;
     font-size:1em;
     margin: 0 0 #{2*1.125em};
+    &__link{
+      text-decoration: none;
+      &:hover{
+        color:#666;
+      }
+    }
+  }
+  &__content{
+    width: 53em;
+    max-width: 100%;
+    column-count: 2;
+    column-gap: 3em;
   }
   p{
     font-weight: 900;
-    margin: 0;
+    margin: 0 0 1.125em;
   }
 }
 
@@ -50,6 +68,46 @@ a{
     font-style: italic;
     padding: 0;
     margin: 0;
+  }
+  &__instagram{
+    margin: auto auto 0 -8px;
+    padding: 8px;
+    width: 16px;
+    height: 16px;
+    &:hover{
+      opacity: .5;
+    }
+    &:before{
+      content: url('../images/instagram_simple_icon.svg');
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+    }
+    span{
+      display: none;
+    }
+  }
+  &__titles,
+  &__content{
+    max-width: 100%;
+    width:25em;
+  }
+  &__titles{
+    margin: 0 0 1.125em;
+    text-decoration: none;
+    &:hover{
+      span{
+        color:#666;
+      }
+    }
+  }
+  &__title{
+    display: inline-flex;
+    & + &--en{
+      font-style: italic;
+      font-weight: normal;
+      margin: 0 0 0 .25em;
+    }
   }
   &__week{
     margin: 1.5em 0 0 0;
@@ -89,11 +147,31 @@ a{
   strong, a{
     font-weight: 900;
     font-style: normal;
+    text-decoration: none;
+  }
+  .faune{
+    a{
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+  p{
+    margin: 0;
   }
 }
 
+@media screen and (max-width: 960px) {
+  .intro{
+    &__content{
+      width:25em;
+      column-count: 1;
+    }
+  }
+}
+
+
 @media screen and (max-width: 720px) {
-  main{
+  .layout{
     padding: 1.5em;
   }
   .print {

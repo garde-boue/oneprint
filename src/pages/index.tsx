@@ -1,9 +1,7 @@
 import * as React from "react"
 import Helmet from "react-helmet"
-import "../styles/styles.scss"
-import {graphql, Link} from "gatsby";
+import {graphql} from "gatsby";
 import Print from "../components/Print";
-import Footer from "../components/Footer";
 
 // markup
 const IndexPage = ({data}) => {
@@ -11,19 +9,17 @@ const IndexPage = ({data}) => {
   const {frontmatter={},html=''} = index
   const {title='…'} = frontmatter
   return (
-    <main>
+    <div className={"page"}>
         <Helmet>
             <title>{title}</title>
         </Helmet>
-        <div className="intro">
-            <h1 className={"intro__title"}>{title}</h1>
+        <main className="intro">
             <div className={"intro__content"} dangerouslySetInnerHTML={{__html:html}} />
-        </div>
+        </main>
         <div className="prints">
             {(prints.nodes||[]).map((print,key)=><Print key={key} print={print} />)}
         </div>
-        <Footer />
-    </main>
+    </div>
   )
 }
 
@@ -39,25 +35,10 @@ export const pageQuery = graphql`
         }
         prints:allMarkdownRemark(
             filter: {frontmatter: {week: {gt: 0}}}
-            sort: {fields: frontmatter___week, order: ASC}
+            sort: {fields: frontmatter___week, order: DESC}
         ) {
             nodes {
-                html
-                frontmatter {
-                    title
-                    week
-                    date_from:date(locale: "fr", formatString: "D MMMM")
-                    date_to(locale: "fr", formatString: "D MMMM")
-                    images {
-                        childImageSharp {
-                            gatsbyImageData(layout: CONSTRAINED)
-                            original {
-                                width
-                                height
-                            }
-                        }
-                    }
-                }
+                ... Print
             }
         }
     }

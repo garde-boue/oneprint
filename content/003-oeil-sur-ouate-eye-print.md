@@ -1,5 +1,6 @@
 ---
-title: Œil sur ouate • Eye print
+title: Œil sur ouate
+title_en: Eye print
 week: 3
 date: 2022-02-14
 date_to: 2022-02-20
