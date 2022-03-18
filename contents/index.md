@@ -10,7 +10,7 @@ Chaque semaine, j’imprime une image.
 
 Une image issue de mon fonds photographique, 
 celui que je constitue chaque jour ou presque.
-Ces images mettent en évidence des détails issues de la nature, 
+Ces images mettent en évidence des détails issus de la nature, 
 de mon environnement, des gestes accomplis au quotidien, 
 des rituels qui sont également être infusées de l’actualité du monde autour.
 
@@ -28,7 +28,7 @@ tissu ou d’autres supports pour prendre corps par différentes techniques,
 certaines peu conventionnelles ou farfelues.
 Pas de format imposé dans cet ensemble, 
 le nombre d’exemplaires varient selon la technique d’impression, 
-de 10 exemplaires à 40.
+de 9 exemplaires à 40.
 
 Les variations, les accidents sont embrassées avec joie, 
 il ne s’agit pas d’un travail reproductif mais plutôt de l’expérience de possibles,
