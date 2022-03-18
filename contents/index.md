@@ -9,7 +9,8 @@ il débute en février et s’achèvera l’année prochaine.
 Chaque semaine, j’imprime une image.
 
 Une image issue de mon fonds photographique, 
-celui que je constitue chaque jour ou presque.
+celui que je constitue chaque jour ou presque. 
+Ou encore issue de mes notes dessinées.
 Ces images mettent en évidence des détails issus de la nature, 
 de mon environnement, des gestes accomplis au quotidien, 
 des rituels qui sont également être infusées de l’actualité du monde autour.
