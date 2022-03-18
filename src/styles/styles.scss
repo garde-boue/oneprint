@@ -104,21 +104,32 @@ a{
     margin: 0;
   }
   &__instagram{
-    margin: auto auto 0 -8px;
-    padding: 8px;
-    width: 16px;
-    height: 16px;
-    &:hover{
-      opacity: .5;
-    }
-    &:before{
-      content: url('../images/instagram_simple_icon.svg');
+    display: flex;
+    &__icon{
+      margin: auto 0 0 -8px;
+      padding: 8px;
       width: 16px;
       height: 16px;
-      display: inline-block;
+      line-height: 16px;
+      span{
+        display: none;
+      }
+      &:before{
+        content: url('../images/instagram_simple_icon.svg');
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+      }
     }
-    span{
-      display: none;
+    &__hashtag{
+      margin: auto 0 0 -8px;
+      padding: 8px;
+      font-weight: normal;
+      font-style: italic;
+      text-decoration: none;
+    }
+    a:hover{
+      opacity: .5;
     }
   }
   &__titles,
@@ -129,6 +140,7 @@ a{
   &__titles{
     margin: 0 0 1.125em;
     text-decoration: none;
+    font-size: 16px;
     &--link{
       &:hover{
         span{

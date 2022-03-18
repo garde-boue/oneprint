@@ -1,14 +1,15 @@
 import * as React from "react"
+// @ts-ignore
 import Helmet from "react-helmet"
-import {graphql} from "gatsby";
-import Print from "../components/Print";
+import {graphql, PageProps} from "gatsby";
+import Print, {PrintProps} from "../components/Print";
+import {Key} from "react";
 
-// markup
-const IndexPage = ({data}) => {
-    const {prints,index={}} = data
+const IndexPage = ({data}:PageProps) => {
+  const {prints,index={}} = data
   const {frontmatter={},html=''} = index
   const {title='…'} = frontmatter
-  return (
+    return (
     <div className={"page"}>
         <Helmet>
             <title>{title} • Anne-Émilie Philippe</title>
@@ -17,7 +18,7 @@ const IndexPage = ({data}) => {
             <div className={"intro__content"} dangerouslySetInnerHTML={{__html:html}} />
         </main>
         <div className="prints">
-            {(prints.nodes||[]).map((print,key)=><Print key={key} print={print} />)}
+            {(prints.nodes||[]).map((print:PrintProps,key:Key)=><Print key={key} print={print} />)}
         </div>
     </div>
   )
@@ -34,7 +35,7 @@ export const pageQuery = graphql`
             html
         }
         prints:allMarkdownRemark(
-            filter: {frontmatter: {week: {gt: 0}}}
+            filter: {frontmatter: {week: {gt: 0}, preview: {ne: "yes"}}}
             sort: {fields: frontmatter___week, order: DESC}
         ) {
             nodes {

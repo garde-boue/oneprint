@@ -1,36 +1,83 @@
-import React from "react";
-import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
+import React, {Key, ReactNode} from "react";
+import {GatsbyImage, getImage, ImageDataLike} from "gatsby-plugin-image";
 import {graphql, Link} from "gatsby";
 
-const PrintImage = ({image, title})=>{
-    const imgData:IGatsbyImageData | undefined = getImage(image)
-    const {width=1920} = imgData
-    return imgData && <div className={`print__image print__image--${width/160}`}>
-        <GatsbyImage alt={title} image={imgData} />
-    </div>
+interface PrintImageProps {
+    image?: ImageDataLike,
+    title?: string
 }
 
-const Print = ({print, mode='block'})=>{
+const PrintImage = ({image, title=''}:PrintImageProps)=>{
+    if(image){
+        const imgData = getImage(image)
+        if(imgData){
+            const {width=1920} = imgData
+            return <div className={`print__image print__image--${width/160}`}>
+                <GatsbyImage alt={title} image={imgData} />
+            </div>
+        }
+    }
+    return <></>
+
+}
+
+interface PrintFrontmatter {
+    week?: number,
+    date_from?: string
+    date_to?: string
+    title?: string
+    title_en?: string
+    instagram?: string
+    images?: [ImageDataLike]
+    hashtags?: [string]
+}
+
+export interface PrintProps {
+    mode?: string,
+    print: {
+        frontmatter?:PrintFrontmatter
+        html?:string
+    }
+}
+
+const Print = ({print={}, mode='block'}:PrintProps)=>{
     const isBlock = mode ==='block';
-    const {frontmatter={}, html=''} = print
-    const {week=0, date_from='', date_to='', title='', images=[], instagram='', title_en=''} = frontmatter
+    const {html=''} = print
+    const frontmatter:PrintFrontmatter = print.frontmatter || {}
+    const {
+        week=0,
+        date_from='',
+        date_to='',
+        title='',
+        title_en='',
+        images=[],
+        instagram='',
+        hashtags=[]
+    } = frontmatter
     const date_from_parts = date_from.split(' ')
     const date_to_parts = date_to.split(' ')
     const date_from_auto = date_from_parts[1] === date_to_parts[1] ? date_from_parts[0] : date_from;
     const title_elements = <>
-        {title && <span className="print__title print__title--fr">{title} </span>}
-        {title_en && <span className="print__title print__title--en" lang={"en"}>{title_en} </span>}
+        {title && <span className="print__title print__title--fr">{`${title} `}</span>}
+        {title_en && <span className="print__title print__title--en" lang={"en"}>{`${title_en} `}</span>}
     </>
     return <article className={"print"} data-week={week}>
-        <div className="print__week">Semaine {week} </div>
-        <div className="print__date">du {date_from_auto} au {date_to} </div>
+        <h3 className="print__week">{`Semaine ${week} `}</h3>
+        <div className="print__date">{`du ${date_from_auto} au ${date_to} `}</div>
         {isBlock ?
             <Link className={"print__titles print__titles--link"} to={`/week/${week}`}>{title_elements}</Link>:
-            <div className={"print__titles"}>{title_elements}</div>
+            <h1 className={"print__titles"}>{title_elements}</h1>
         }
         <div className="print__content" dangerouslySetInnerHTML={{__html:html}} />
-        {instagram && <a href={instagram} target={"_blank"} className={"print__instagram"}><span>Instagram </span></a>}
-        <div className="print__images">{images.map((image,i)=>
+        <nav className="print__instagram">
+            {instagram && <a href={instagram} target={"_blank"} className={"print__instagram__icon"} rel={"noopener,noopener"}><span>{'Instagram '}</span></a>}
+            {(hashtags||['1printaweek']).map((hashtag,key:Key)=>
+                <a key={key} href={`https://www.instagram.com/explore/tags/${hashtag}/`}
+                   title={`Instagram #${hashtag}`}
+                   target={"_blank"} className={"print__instagram__hashtag"}>{`#${hashtag} `}</a>
+            )}
+        </nav>
+        <div className="print__images">{images.map((image:ImageDataLike,i:Key)=>
             <PrintImage key={i} image={image} title={title||title_en||''}/>)}
         </div>
     </article>
@@ -45,6 +92,7 @@ export const query = graphql`
           title_en
           week
           instagram
+          hashtags
           date_from:date(locale: "fr", formatString: "D MMMM")
           date_to(locale: "fr", formatString: "D MMMM")
           images {

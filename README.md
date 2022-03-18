@@ -1,6 +1,7 @@
 # One print a week • Une image par semaine
 
-voir le site → [oneprint.anem.name](https://oneprint.anem.name)
+> Retrouvez toutes les publications directement sur le site [oneprint](https://oneprint.anem.name) 
+> ou sur Instagram [#1printaweek](https://www.instagram.com/explore/tags/1printaweek/).
 
 1printaweek est un projet mené sur l’année 2022,
 <br/>il débute en février et s’achèvera l’année prochaine.
@@ -69,8 +70,8 @@ On a ainsi un principe plus simple en 2 colonnes.
 
 ### À propos
 
-- Anne-Émilie Philippe pour l’œuvre
-- Arthur Violy pour le site web
+- [Anne-Émilie Philippe](https://www.anem.name) pour l’œuvre
+- [Arthur Violy](https://violy.net) pour le site web
 - Faune, Alice Savoie / Cnap pour la typographie
 
 copyright 2022

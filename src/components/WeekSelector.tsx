@@ -1,24 +1,24 @@
-import React from "react";
+import React, {BaseSyntheticEvent, Key} from "react";
 import {graphql, navigate, StaticQuery} from "gatsby";
 
 const WeekSelector = ()=> {
-    function selectItem(e){
+    function selectItem(e:BaseSyntheticEvent){
         const week = e.target.value
         const printEl = document.querySelector(`[data-week="${week}"]`)
         if(week==='/'){
-            navigate(`/`)
+            navigate(`/`).finally()
         }else if(printEl){
             printEl.scrollIntoView();
         }else{
-            navigate(`/week/${week}`)
+            navigate(`/week/${week}`).finally()
         }
     }
     return <form className={"week-selector"}>
         <StaticQuery query={graphql`
                     query{
                         prints:allMarkdownRemark(
-                            filter: {frontmatter: {week: {gt: 0}}}
-                            sort: {fields: frontmatter___week, order: ASC}
+                            filter: {frontmatter: {week: {gt: 0}, preview: {ne: "yes"}}}
+                            sort: {fields: frontmatter___week, order: DESC}
                         ) {
                             nodes {
                                 frontmatter{
@@ -33,7 +33,7 @@ const WeekSelector = ()=> {
             const options = data.prints.nodes;
             return  <select id={"select-nav"} onChange={selectItem}>
                 <option value={"/"}>Toutes les semaines</option>
-                {options.map((print,key)=>{
+                {options.map((print:any,key:Key)=>{
                     const {title, title_en, week} = print.frontmatter
                     return <option key={key} value={week}>{week} → {[title,title_en].filter(t=>!!t).join(' • ')}</option>
                 })}
