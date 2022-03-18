@@ -4,7 +4,7 @@ title: One print a week • Une image par semaine
 date: 2022-02-01
 ---
 
-One print a week / Une image par semaine est un projet mené sur l’année 2022, 
+One print a week • Une image par semaine est un projet mené sur l’année 2022, 
 il débute en février et s’achèvera l’année prochaine.
 Chaque semaine, j’imprime une image.
 
