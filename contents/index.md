@@ -4,7 +4,7 @@ title: One print a week • Une image par semaine
 date: 2022-02-01
 ---
 
-1printaweek est un projet mené sur l’année 2022, 
+One print a week / Une image par semaine est un projet mené sur l’année 2022, 
 il débute en février et s’achèvera l’année prochaine.
 Chaque semaine, j’imprime une image.
 
@@ -40,3 +40,5 @@ Trois ensembles sont prévus pour rester complets,
 et j’espère exposés tandis que le reste des tirages peut être vendu à la demande 
 et permet de financer le projet, ils sont numérotés signés, 
 abordables et disponibles simplement en m’écrivant un mail.
+
+Retrouvez aussi le projet sur Instagram #oneprintaweek
