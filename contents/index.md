@@ -13,7 +13,7 @@ celui que je constitue chaque jour ou presque.
 Ou encore tirée de mes notes dessinées.
 Ces images mettent en évidence des détails issus de la nature, 
 de mon environnement, des gestes accomplis au quotidien, 
-des rituels qui sont également être infusées de l’actualité du monde autour.
+des rituels qui sont également infusées de l’actualité du monde autour.
 
 Elles parlent de formes, de couleurs, de sens artistiques des animaux et des plantes. 
 Des humains et des autres qu’humains, de ce qu’ils fabriquent ou défont.
@@ -21,8 +21,7 @@ Mais aussi d’impressions et de motifs à la génération spontanée, de chimie
 
 Des éléments autour de nous, plus grands que nous ou plus petits, 
 du hasard ou plutôt d’heureuses rencontres 
-de circonstances qui permettent ces apparitions, 
-ces objets ou ces disparitions.
+de circonstances qui permettent ces apparitions ou ces disparitions.
 
 Tout cela reflète mon attention aux choses discrètes et s’incarne sur papier, 
 tissu ou d’autres supports pour prendre corps par différentes techniques, 
