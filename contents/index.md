@@ -8,9 +8,9 @@ date: 2022-02-01
 il débute en février et s’achèvera l’année prochaine.
 Chaque semaine, j’imprime une image.
 
-Une image issue de mon fonds photographique, 
+Une image tirée de mon fonds photographique, 
 celui que je constitue chaque jour ou presque. 
-Ou encore issue de mes notes dessinées.
+Ou encore tirée de mes notes dessinées.
 Ces images mettent en évidence des détails issus de la nature, 
 de mon environnement, des gestes accomplis au quotidien, 
 des rituels qui sont également être infusées de l’actualité du monde autour.
@@ -26,10 +26,10 @@ ces objets ou ces disparitions.
 
 Tout cela reflète mon attention aux choses discrètes et s’incarne sur papier, 
 tissu ou d’autres supports pour prendre corps par différentes techniques, 
-certaines peu conventionnelles ou farfelues.
+certaines peu conventionnelles ou même farfelues.
 Pas de format imposé dans cet ensemble, 
 le nombre d’exemplaires varient selon la technique d’impression, 
-de 9 exemplaires à 40.
+de 5 exemplaires à 40.
 
 Les variations, les accidents sont embrassées avec joie, 
 il ne s’agit pas d’un travail reproductif mais plutôt de l’expérience de possibles,
@@ -41,4 +41,4 @@ et j’espère exposés tandis que le reste des tirages peut être vendu à la 
 et permet de financer le projet, ils sont numérotés signés, 
 abordables et disponibles simplement en m’écrivant un mail.
 
-Retrouvez aussi le projet sur Instagram [#1printaweek](https://www.instagram.com/explore/tags/1printaweek/)
+Retrouvez aussi le projet sur Instagram #1printaweek
