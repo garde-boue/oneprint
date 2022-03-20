@@ -37,7 +37,7 @@ Les variations, les accidents sont embrassées avec joie,
 il ne s’agit pas d’un travail reproductif mais plutôt de l’expérience de possibles,
 c’est pourquoi je parlerais parfois de tirages plutôt que d’exemplaires dans la légende.
 
-Ce corpus constitue un ensemble qui vient ajouter de la beauté hebdomadaire à nos existences humaines.
+Ce corpus constituera un ensemble qui, je l'espère, viendra ajouter de la beauté hebdomadaire à nos existences humaines.
 Trois ensembles sont prévus pour rester complets, 
 et j’espère exposés tandis que le reste des tirages peut être vendu à la demande 
 et permet de financer le projet, ils sont numérotés signés, 
