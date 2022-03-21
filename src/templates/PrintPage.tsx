@@ -11,12 +11,12 @@ const PrintPage = ({data}) => {
     const {title='', title_en='', week=''} = print.frontmatter;
     const meta_title = [title,title_en].filter(t=>!!t).join(' • ');
     return (
-        <div className={"page page--print"}>
+        <main className={"page page--print"}>
             <Helmet>
                 <title>{week.toString()} • {meta_title} • one print a week</title>
             </Helmet>
             <Print print={print} mode={"page"} />
-        </div>
+        </main>
     )
 }
 
