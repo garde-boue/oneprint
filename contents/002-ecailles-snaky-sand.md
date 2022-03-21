@@ -5,6 +5,9 @@ week: 2
 date: 2022-02-07
 date_to: 2022-02-13
 images: [images/002.jpg]
+instagram:
+hashtags: []
+preview: ignore
 ---
 Impression laser sur papier doré.
 

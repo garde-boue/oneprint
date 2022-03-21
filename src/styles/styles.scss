@@ -137,10 +137,17 @@ a{
     max-width: 100%;
     width:25em;
   }
+  &__content{
+    em,i{
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
   &__titles{
     margin: 0 0 1.125em;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 900;
     &--link{
       &:hover{
         span{
@@ -158,6 +165,8 @@ a{
     }
   }
   &__week{
+    font-size: 1em;
+    font-weight: 900;
     margin: 1.5em 0 0 0;
   }
   &__images{
