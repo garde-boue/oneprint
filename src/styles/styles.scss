@@ -180,10 +180,12 @@ a{
   &__videos + &__images{
     margin: 0 -1.5em 0;
   }
-  &__image, &__video{
+  &__image, &__video {
     display: flex;
     padding: 1.5em 1.5em 1.5em;
     box-sizing: border-box;
+  }
+  &__image{
     @for $i from 1 through 12{
       &--#{$i}{
         width: percentage(math.div($i,12));
@@ -200,6 +202,12 @@ a{
         bottom: 0;
         top: auto;
       }
+    }
+  }
+  &__video{
+    video{
+      max-width: 100%;
+      height:auto;
     }
   }
 }
