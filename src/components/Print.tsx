@@ -29,6 +29,7 @@ interface PrintFrontmatter {
     title_en?: string
     instagram?: string
     images?: [ImageDataLike]
+    videos?: [string]
     hashtags?: [string]
 }
 
@@ -52,6 +53,7 @@ const Print = ({print={}, mode='block'}:PrintProps)=>{
         title_en='',
         images=[],
         instagram='',
+        videos=[],
         hashtags=[]
     } = frontmatter
     const date_from_parts = date_from.split(' ')
@@ -77,9 +79,20 @@ const Print = ({print={}, mode='block'}:PrintProps)=>{
                    target={"_blank"} className={"print__instagram__hashtag"}>{`#${hashtag} `}</a>
             )}
         </nav>
-        <div className="print__images">{images.map((image:ImageDataLike,i:Key)=>
-            <PrintImage key={i} image={image} title={title||title_en||''}/>)}
-        </div>
+        {!!videos &&
+            <div className="print__videos">{videos.map((video: string, i: Key) =>
+                <video key={i} src={video} className={"print__video"}
+                       playsInline={true}
+                       muted={true}
+                       controls={true}
+                       title={title || title_en || ''}/>)}
+            </div>
+        }
+        {!!images &&
+            <div className="print__images">{images.map((image: ImageDataLike, i: Key) =>
+                <PrintImage key={i} image={image} title={title || title_en || ''}/>)}
+            </div>
+        }
     </article>
 }
 export default Print
@@ -104,6 +117,7 @@ export const query = graphql`
                   }
               }
           }
+          videos
       }
   }
 `

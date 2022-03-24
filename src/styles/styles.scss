@@ -103,6 +103,9 @@ a{
     padding: 0;
     margin: 1em 0;
   }
+  video{
+    display: block;
+  }
   &__instagram{
     display: flex;
     &__icon{
@@ -169,12 +172,15 @@ a{
     font-weight: 900;
     margin: 1.5em 0 0 0;
   }
-  &__images{
+  &__images, &__videos{
     display: flex;
     flex-wrap: wrap;
     margin: 1.5em -1.5em 0;
   }
-  &__image{
+  &__videos + &__images{
+    margin: 0 -1.5em 0;
+  }
+  &__image, &__video{
     display: flex;
     padding: 1.5em 1.5em 1.5em;
     box-sizing: border-box;
