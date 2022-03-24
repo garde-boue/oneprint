@@ -105,6 +105,8 @@ a{
   }
   video{
     display: block;
+    max-width: 100%;
+    height:auto;
   }
   &__instagram{
     display: flex;
@@ -202,12 +204,6 @@ a{
         bottom: 0;
         top: auto;
       }
-    }
-  }
-  &__video{
-    video{
-      max-width: 100%;
-      height:auto;
     }
   }
 }
