@@ -251,10 +251,13 @@ a{
     }
   }
   .print {
-    &__images {
+    &__images, &__videos {
       margin: .75em -.75em;
     }
-    &__image{
+    &__videos + &__images{
+      margin: -.75em -.75em .75em;
+    }
+    &__image, &__video{
       padding: .75em .75em .75em;
       width: 100%;
       @for $i from 1 through 6{
