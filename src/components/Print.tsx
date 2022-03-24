@@ -83,7 +83,6 @@ const Print = ({print={}, mode='block'}:PrintProps)=>{
             <div className="print__videos">{videos.map((video: string, i: Key) =>
                 <video key={i} src={video} className={"print__video"}
                        playsInline={true}
-                       muted={true}
                        controls={true}
                        title={title || title_en || ''}/>)}
             </div>
