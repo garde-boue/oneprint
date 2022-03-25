@@ -80,7 +80,7 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         images=[],
         instagram='',
         videos=[],
-        hashtags=[]
+        hashtags=['1printaweek']
     } = frontmatter
     const date_from_parts = date_from.split(' ')
     const date_to_parts = date_to.split(' ')

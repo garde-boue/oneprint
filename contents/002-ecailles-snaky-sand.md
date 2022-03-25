@@ -6,7 +6,7 @@ date: 2022-02-07
 date_to: 2022-02-13
 images: [images/002.jpg]
 instagram:
-hashtags: []
+hashtags: [1printaweek,anneemiliephilippe]
 preview: ignore
 ---
 Impression laser sur papier doré.

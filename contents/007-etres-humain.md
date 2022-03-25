@@ -5,7 +5,7 @@ week: 7
 date: 2022-03-14
 date_to: 2022-03-20
 images: [images/007-1.jpg,images/007-2.jpg]
-hashtags: [1printaweek]
+hashtags: [1printaweek,anneemiliephilippe]
 instagram:
 preview: ignore
 ---
