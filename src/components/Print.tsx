@@ -26,6 +26,7 @@ const PrintImage = ({image, title=''}:PrintImageBlockProps)=>{
 
 interface PrintFrontmatter {
     week?: number,
+    og_published_time?: string
     date_from?: string
     date_to?: string
     title?: string
@@ -131,7 +132,6 @@ export const PrintOgImage = ({print}:PrintBlockProps) => {
     let metaWrapper = <></>;
     if(biggestImage){
         const ogImageUrl = absUrl(biggestImage.childImageSharp.og_image.images.fallback.src)
-        console.log('PrintOgImage',ogImageUrl);
         metaWrapper = <Helmet>
             <meta property="og:image:url" content={ogImageUrl} />
             <meta property="og:image:width" content={"1200"} />
@@ -152,6 +152,7 @@ export const query = graphql`
           week
           instagram
           hashtags
+          og_published_time: date(formatString: "YYYY-MM-DD")
           date_from:date(locale: "fr", formatString: "D MMMM")
           date_to(locale: "fr", formatString: "D MMMM")
           images {

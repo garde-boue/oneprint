@@ -14,6 +14,7 @@ export default function MainLayout({ children }) {
                 lang: 'fr',
                 title: title
             }}>
+                <meta property="og:locale" content="fr_FR" />
             </Helmet>
             <div className="intro__title">
                 <Link to={"/"} className={"intro__title__link"}>{title}</Link>

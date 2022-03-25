@@ -7,6 +7,7 @@ export const siteMetaData = (key:string):string=>{
                 siteMetadata {
                     siteUrl
                     title
+                    description
                 }
             }
         }
@@ -19,7 +20,11 @@ export const siteUrl = ():string=>{
 }
 
 export const siteTitle = ():string=>{
-    return siteMetaData('siteTitle')
+    return siteMetaData('title')
+}
+
+export const siteDescription = ():string=>{
+    return siteMetaData('description')
 }
 
 export const absUrl = (path:string=''):string=>{

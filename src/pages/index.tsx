@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import {graphql, PageProps} from "gatsby";
 import Print, {PrintOgImage, PrintProps} from "../components/Print";
 import {Key} from "react";
+import {siteDescription} from "../utils/Website";
 
 interface IndexPageProps extends PageProps{
     data:{
@@ -23,11 +24,17 @@ const IndexPage = ({data}:IndexPageProps) => {
   const {prints,index} = data
   const {frontmatter,html} = index
   const {title='…'} = frontmatter
+    const meta_title = `${title} • Anne-Émilie Philippe`;
+    const meta_description = siteDescription();
     const latestPrint = prints.nodes[0];
     return (
     <div className={"page"}>
         <Helmet>
-            <title>{title} • Anne-Émilie Philippe</title>
+            <title>{meta_title}</title>
+            <meta name={"description"} content={meta_description} />
+            <meta property="og:title" content={meta_title} />
+            <meta property="og:description" content={meta_description} />
+            <meta property="og:type" content="website" />
         </Helmet>
         <PrintOgImage print={latestPrint} />
         <main className="intro">

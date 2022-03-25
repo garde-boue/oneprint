@@ -15,7 +15,7 @@ interface PrintPageProps extends PageProps{
 const PrintPage = ({data}:PrintPageProps) => {
     const {print} = data
     const {excerpt} = print
-    const {title='', title_en='', week=''} = print.frontmatter;
+    const {title='', title_en='', week='', og_published_time=''} = print.frontmatter;
     const meta_title = `${week.toString()} • ${[title,title_en].filter(t=>!!t).join(' • ')}`;
     return (
         <main className={"page page--print"}>
@@ -23,6 +23,10 @@ const PrintPage = ({data}:PrintPageProps) => {
                 <title>{meta_title}</title>
                 <meta property="og:title" content={meta_title} />
                 <meta property="og:description" content={excerpt} />
+                <meta property="og:type" content="article" />
+                <meta property="og:article:section" content="Art" />
+                <meta property="og:article:author" content="Anne-Émilie Philippe" />
+                <meta property="og:article:published_time" content={og_published_time} />
             </Helmet>
             <PrintOgImage print={print} />
             <Print print={print} mode={"page"} />
