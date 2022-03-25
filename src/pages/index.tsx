@@ -37,8 +37,8 @@ const IndexPage = ({data}:IndexPageProps) => {
             <meta property="og:type" content="website" />
             <meta name="twitter:site" content="@isitbook" />
             <meta name="twitter:creator" content="@isitbook" />
-            <meta name="twitter:title" content={meta_description} />
-            <meta name="twitter:description" content="" />
+            <meta name="twitter:title" content={meta_title} />
+            <meta name="twitter:description" content={meta_description} />
         </Helmet>
         <PrintOgImage print={latestPrint} />
         <main className="intro">
