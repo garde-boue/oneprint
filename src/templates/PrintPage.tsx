@@ -27,6 +27,10 @@ const PrintPage = ({data}:PrintPageProps) => {
                 <meta property="og:article:section" content="Art" />
                 <meta property="og:article:author" content="Anne-Émilie Philippe" />
                 <meta property="og:article:published_time" content={og_published_time} />
+                <meta name="twitter:site" content="@isitbook" />
+                <meta name="twitter:creator" content="@isitbook" />
+                <meta name="twitter:title" content={meta_title} />
+                <meta name="twitter:description" content={excerpt} />
             </Helmet>
             <PrintOgImage print={print} />
             <Print print={print} mode={"page"} />
