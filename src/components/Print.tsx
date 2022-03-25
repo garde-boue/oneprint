@@ -153,22 +153,25 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         {!!video_path &&
             <div className="print__videos">
                 <div className="print__video" data-controls={video_controls?'yes':'no'} ref={videoDivRef}>
-                    <video src={video_path}
-                       ref={videoRef}
-                       playsInline={true}
-                       controls={video_controls}
-                       muted={video_muted || video_autoplay}
-                       loop={video_loop}
-                       autoPlay={video_autoplay}
-                       width={video_width}
-                       height={video_height}
-                       title={title || title_en || ''}
-                       poster={video_poster}
-                       onClick={playVideo}
-                       onPlay={updateVideoState}
-                       onPause={updateVideoState}
-                       onCanPlay={updateVideoState}
-                    />
+                    <div className={"print__video__placeholder"} style={{maxWidth:video_width}} >
+                        <div style={{paddingTop:`${100*parseFloat(video_height)/parseFloat(video_width)}%`}} />
+                        <video src={video_path}
+                           ref={videoRef}
+                           playsInline={true}
+                           controls={video_controls}
+                           muted={video_muted || video_autoplay}
+                           loop={video_loop}
+                           autoPlay={video_autoplay}
+                           width={video_width}
+                           height={video_height}
+                           title={title || title_en || ''}
+                           poster={video_poster}
+                           onClick={playVideo}
+                           onPlay={updateVideoState}
+                           onPause={updateVideoState}
+                           onCanPlay={updateVideoState}
+                        />
+                    </div>
                 </div>
             </div>
         }
