@@ -27,6 +27,7 @@ const PrintImage = ({image, title=''}:PrintImageBlockProps)=>{
 interface PrintFrontmatter {
     week?: number,
     og_published_time?: string
+    date_published?: string
     date_from?: string
     date_to?: string
     title?: string
@@ -38,6 +39,7 @@ interface PrintFrontmatter {
 }
 
 export interface PrintImageProps extends IGatsbyImageData{
+    publicURL:string
     childImageSharp:{
         gatsbyImageData:{
 
@@ -157,7 +159,9 @@ export const query = graphql`
           og_published_time: date(formatString: "YYYY-MM-DD")
           date_from:date(locale: "fr", formatString: "D MMMM")
           date_to(locale: "fr", formatString: "D MMMM")
+          date_published: date(formatString: "YYYY-MM-DDTHH:mm:ssZ")
           images {
+              publicURL
               childImageSharp {
                   gatsbyImageData(layout: CONSTRAINED)
                   original {

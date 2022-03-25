@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 import {graphql, PageProps} from "gatsby";
 import Print, {PrintOgImage, PrintProps} from "../components/Print";
 import {Key} from "react";
-import {siteDescription} from "../utils/Website";
+import {absUrl, siteDescription} from "../utils/Website";
 
 interface IndexPageProps extends PageProps{
     data:{
@@ -35,6 +35,7 @@ const IndexPage = ({data}:IndexPageProps) => {
             <meta property="og:title" content={meta_title} />
             <meta property="og:description" content={meta_description} />
             <meta property="og:type" content="website" />
+            <meta property="og:url" content={absUrl("/")} />
             <meta name="twitter:site" content="@isitbook" />
             <meta name="twitter:creator" content="@isitbook" />
             <meta name="twitter:title" content={meta_title} />
