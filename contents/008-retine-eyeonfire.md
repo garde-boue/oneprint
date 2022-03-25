@@ -12,7 +12,7 @@ preview: ignore
 ---
 
 Sérigraphie sur Olin regular 300g,
-10cm x 15cm, 25 tirages.
-Open edition
+10cm x 15cm, 25 tirages.
+Open edition
 
 

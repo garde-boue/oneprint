@@ -1,20 +1,30 @@
 import * as React from "react"
+// @ts-ignore
 import Helmet from "react-helmet"
 import "../styles/styles.scss"
-import {graphql, Link} from "gatsby";
-import Print from "../components/Print";
-import Footer from "../components/Footer";
+import {graphql, PageProps} from "gatsby";
+import Print, {PrintOgImage, PrintProps} from "../components/Print";
+
+interface PrintPageProps extends PageProps{
+    data:{
+        print: PrintProps
+    }
+}
 
 // markup
-const PrintPage = ({data}) => {
+const PrintPage = ({data}:PrintPageProps) => {
     const {print} = data
+    const {excerpt} = print
     const {title='', title_en='', week=''} = print.frontmatter;
-    const meta_title = [title,title_en].filter(t=>!!t).join(' • ');
+    const meta_title = `${week.toString()} • ${[title,title_en].filter(t=>!!t).join(' • ')}`;
     return (
         <main className={"page page--print"}>
             <Helmet>
-                <title>{week.toString()} • {meta_title} • one print a week</title>
+                <title>{meta_title}</title>
+                <meta property="og:title" content={meta_title} />
+                <meta property="og:description" content={excerpt} />
             </Helmet>
+            <PrintOgImage print={print} />
             <Print print={print} mode={"page"} />
         </main>
     )

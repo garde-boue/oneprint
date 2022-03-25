@@ -1,13 +1,16 @@
-import React, {Key, ReactNode} from "react";
-import {GatsbyImage, getImage, ImageDataLike} from "gatsby-plugin-image";
+// @ts-ignore
+import Helmet from "react-helmet"
+import React, {Key} from "react";
+import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
 import {graphql, Link} from "gatsby";
+import {absUrl} from "../utils/Website";
 
-interface PrintImageProps {
-    image?: ImageDataLike,
+interface PrintImageBlockProps {
+    image: PrintImageProps,
     title?: string
 }
 
-const PrintImage = ({image, title=''}:PrintImageProps)=>{
+const PrintImage = ({image, title=''}:PrintImageBlockProps)=>{
     if(image){
         const imgData = getImage(image)
         if(imgData){
@@ -28,23 +31,45 @@ interface PrintFrontmatter {
     title?: string
     title_en?: string
     instagram?: string
-    images?: [ImageDataLike]
+    images?: [PrintImageProps]
     videos?: [string]
     hashtags?: [string]
 }
 
-export interface PrintProps {
-    mode?: string,
-    print: {
-        frontmatter?:PrintFrontmatter
-        html?:string
+export interface PrintImageProps extends IGatsbyImageData{
+    childImageSharp:{
+        gatsbyImageData:{
+
+        }
+        original: {
+            width: number
+            height: number
+        }
+        og_image: {
+            images:{
+                fallback:{
+                    src:string
+                }
+            }
+        }
     }
 }
 
-const Print = ({print={}, mode='block'}:PrintProps)=>{
+export interface PrintProps {
+    frontmatter:PrintFrontmatter
+    html:string
+    excerpt:string
+}
+
+export interface PrintBlockProps {
+    mode?: string,
+    print: PrintProps
+}
+
+const Print = ({print, mode='block'}:PrintBlockProps)=>{
     const isBlock = mode ==='block';
     const {html=''} = print
-    const frontmatter:PrintFrontmatter = print.frontmatter || {}
+    const frontmatter = print.frontmatter
     const {
         week=0,
         date_from='',
@@ -72,7 +97,7 @@ const Print = ({print={}, mode='block'}:PrintProps)=>{
         }
         <div className="print__content" dangerouslySetInnerHTML={{__html:html}} />
         <nav className="print__instagram">
-            {instagram && <a href={instagram} target={"_blank"} className={"print__instagram__icon"} rel={"noopener,noopener"}><span>{'Instagram '}</span></a>}
+            {instagram && <a href={instagram} target={"_blank"} className={"print__instagram__icon"} rel={"noopener,noopener"} aria-label={"Instagram"} />}
             {(hashtags||['1printaweek']).map((hashtag,key:Key)=>
                 <a key={key} href={`https://www.instagram.com/explore/tags/${hashtag}/`}
                    title={`Instagram #${hashtag}`}
@@ -88,7 +113,7 @@ const Print = ({print={}, mode='block'}:PrintProps)=>{
             </div>
         }
         {!!images &&
-            <div className="print__images">{images.map((image: ImageDataLike, i: Key) =>
+            <div className="print__images">{images.map((image: PrintImageProps, i: Key) =>
                 <PrintImage key={i} image={image} title={title || title_en || ''}/>)}
             </div>
         }
@@ -96,9 +121,31 @@ const Print = ({print={}, mode='block'}:PrintProps)=>{
 }
 export default Print
 
+export const PrintOgImage = ({print}:PrintBlockProps) => {
+    const {images=[]} = print.frontmatter
+    const biggestImage:PrintImageProps|undefined = [...images].sort((a:PrintImageProps,b:PrintImageProps)=>{
+        const aWidth = a.childImageSharp.original.width,
+            bWidth = b.childImageSharp.original.width;
+        return aWidth-bWidth;
+    }).pop();
+    let metaWrapper = <></>;
+    if(biggestImage){
+        const ogImageUrl = absUrl(biggestImage.childImageSharp.og_image.images.fallback.src)
+        console.log('PrintOgImage',ogImageUrl);
+        metaWrapper = <Helmet>
+            <meta property="og:image:url" content={ogImageUrl} />
+            <meta property="og:image:width" content={"1200"} />
+            <meta property="og:image:height" content={"630"} />
+            <meta property="og:image:type" content={"image/jpeg"} />
+        </Helmet>
+    }
+    return metaWrapper
+}
+
 export const query = graphql`
   fragment Print on MarkdownRemark {
       html
+      excerpt
       frontmatter {
           title
           title_en
@@ -114,6 +161,14 @@ export const query = graphql`
                       width
                       height
                   }
+                  og_image: gatsbyImageData(
+                      width: 1200
+                      height: 630
+                      formats: JPG
+                      outputPixelDensities: 1
+                      jpgOptions: {quality: 75}
+                      transformOptions: {duotone: {highlight: "#FFFFFF", shadow: "#B300DA"}}
+                  )
               }
           }
           videos

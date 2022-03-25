@@ -13,7 +13,8 @@ export default function MainLayout({ children }) {
             <Helmet htmlAttributes={{
                 lang: 'fr',
                 title: title
-            }}></Helmet>
+            }}>
+            </Helmet>
             <div className="intro__title">
                 <Link to={"/"} className={"intro__title__link"}>{title}</Link>
                 <WeekSelector />

@@ -1,8 +1,35 @@
 @use "sass:math";
-@import "https://www.cnap.fr/sites/faune/styles/faune-fontes.css";
+
+@font-face {
+  font-family: Faune;
+  src: url(./fonts/faune/Faune-Text_Italic.eot);
+  src: url(./fonts/faune/Faune-Text_Italic.eot?#iefix) format("embedded-opentype"),
+  url(./fonts/faune/Faune-Text_Italic.woff2) format("woff2"),
+  url(./fonts/faune/Faune-Text_Italic.woff) format("woff"),
+  url(./fonts/faune/Faune-Text_Italic.ttf) format("truetype"),
+  url(./fonts/faune/Faune-Text_Italic.svg#Faune-Text_Italic) format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Faune;
+  src: url(./fonts/faune/Faune-Display_Black.eot);
+  src: url(./fonts/faune/Faune-Display_Black.eot?#iefix) format("embedded-opentype"),
+  url(./fonts/faune/Faune-Display_Black.woff2) format("woff2"),
+  url(./fonts/faune/Faune-Display_Black.woff) format("woff"),
+  url(./fonts/faune/Faune-Display_Black.ttf) format("truetype"),
+  url(./fonts/faune/Faune-Display_Black.svg#Faune-Display_Black) format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 html, body{
   font-family: 'Faune', sans-serif;
+  font-weight: 900;
+  font-style: normal;
   font-size: 16px;
   line-height: 1.125em;
   padding: 0;
@@ -195,8 +222,10 @@ a{
     }
     .gatsby-image-wrapper{
       display: flex;
+      margin: auto 0 0 0;
       > div{
         margin: auto 0 0 0;
+        position: relative;
       }
       [data-main-image]{
         max-width: 100%;
