@@ -123,13 +123,12 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         }
     }
 
-    function updateVideoState(){
+    function updateVideoState(e:BaseSyntheticEvent){
         if(videoRef.current && videoDivRef.current) {
             const videoDiv: HTMLDivElement = videoDivRef.current,
                 video: HTMLVideoElement = videoRef.current,
                 muted = video.muted,
-                playing: boolean = !(video.paused || video.ended || video.seeking || video.readyState < video.HAVE_FUTURE_DATA);
-            console.log('onPlayVideo', videoDiv, video, playing);
+                playing: boolean = e.type === 'playing' || e.type === 'play' || !(video.paused || video.ended || video.seeking || video.readyState < video.HAVE_FUTURE_DATA);
             videoDiv.setAttribute('data-playing', playing?'yes':'no');
         }
     }
@@ -167,6 +166,9 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
                            title={title || title_en || ''}
                            poster={video_poster}
                            onClick={playVideo}
+                           onProgress={updateVideoState}
+                           onPlaying={updateVideoState}
+                           onEnded={updateVideoState}
                            onPlay={updateVideoState}
                            onPause={updateVideoState}
                            onCanPlay={updateVideoState}
