@@ -127,7 +127,6 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         if(videoRef.current && videoDivRef.current) {
             const videoDiv: HTMLDivElement = videoDivRef.current,
                 video: HTMLVideoElement = videoRef.current,
-                muted = video.muted,
                 playing: boolean = e.type === 'playing' || e.type === 'play' || !(video.paused || video.ended || video.seeking || video.readyState < video.HAVE_FUTURE_DATA);
             videoDiv.setAttribute('data-playing', playing?'yes':'no');
         }

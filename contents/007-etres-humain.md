@@ -19,10 +19,13 @@ Sérigraphie d'encre naturelle à base de noix de galle sur coton microperforé.
 > qui a été aposé sur les murs d'une petite maison abandonnée 
 > et transformée en ruine suite à la catastrophe de Fukushima. 
 > Fukushima c'était le 11 mars il y a 11 ans.
-> *foulard aux multiples usages au Japon
+>
+> *foulard aux multiples usages au Japon.
+
 
 > La photo originale est issue de l'édition que j'ai conçue et imprimée en sérigraphie pour Léo Lequeuche : Fukushima Carnet de voyage, 2018. 
-> Avec son aimable autorisation.
+>
+> Avec son aimable autorisation. 
 
 
 
