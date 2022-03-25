@@ -1,6 +1,6 @@
 // @ts-ignore
 import Helmet from "react-helmet"
-import React, {Key} from "react";
+import React, {BaseSyntheticEvent, Key, useRef} from "react";
 import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
 import {graphql, Link} from "gatsby";
 import {absUrl} from "../utils/Website";
@@ -34,7 +34,14 @@ interface PrintFrontmatter {
     title_en?: string
     instagram?: string
     images?: [PrintImageProps]
-    videos?: [string]
+    video_path?: string
+    video_poster?: string
+    video_width?: string
+    video_height?: string
+    video_muted?: boolean
+    video_loop?: boolean
+    video_autoplay?: boolean
+    video_controls?: boolean
     hashtags?: [string]
 }
 
@@ -81,9 +88,20 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         title_en='',
         images=[],
         instagram='',
-        videos=[],
+        video_path='',
+        video_poster='',
+        video_width='',
+        video_height='',
+        video_muted=false,
+        video_loop=false,
+        video_autoplay=false,
+        video_controls=true,
         hashtags=['1printaweek']
     } = frontmatter
+
+    const videoRef = useRef(null)
+    const videoDivRef = useRef(null)
+
     const date_from_parts = date_from.split(' ')
     const date_to_parts = date_to.split(' ')
     const date_from_auto = date_from_parts[1] === date_to_parts[1] ? date_from_parts[0] : date_from;
@@ -91,6 +109,31 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         {title && <span className="print__title print__title--fr">{`${title} `}</span>}
         {title_en && <span className="print__title print__title--en" lang={"en"}>{`${title_en} `}</span>}
     </>
+
+    function playVideo(e:BaseSyntheticEvent){
+        if(videoRef.current && videoDivRef.current) {
+            const video: HTMLVideoElement = videoRef.current,
+                playing: boolean = !(video.paused || video.ended || video.seeking || video.readyState < video.HAVE_FUTURE_DATA)
+            if (video.muted && !video_muted) video.muted = false;
+            if(playing){
+                video.pause();
+            }else{
+                video.play();
+            }
+        }
+    }
+
+    function updateVideoState(){
+        if(videoRef.current && videoDivRef.current) {
+            const videoDiv: HTMLDivElement = videoDivRef.current,
+                video: HTMLVideoElement = videoRef.current,
+                muted = video.muted,
+                playing: boolean = !(video.paused || video.ended || video.seeking || video.readyState < video.HAVE_FUTURE_DATA);
+            console.log('onPlayVideo', videoDiv, video, playing);
+            videoDiv.setAttribute('data-playing', playing?'yes':'no');
+        }
+    }
+
     return <article className={"print"} data-week={week}>
         <h3 className="print__week">{`Semaine ${week} `}</h3>
         <div className="print__date">{`du ${date_from_auto} au ${date_to} `}</div>
@@ -107,12 +150,26 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
                    target={"_blank"} className={"print__instagram__hashtag"}>{`#${hashtag} `}</a>
             )}
         </nav>
-        {!!videos &&
-            <div className="print__videos">{videos.map((video: string, i: Key) =>
-                <video key={i} src={video} className={"print__video"}
+        {!!video_path &&
+            <div className="print__videos">
+                <div className="print__video" data-controls={video_controls?'yes':'no'} ref={videoDivRef}>
+                    <video src={video_path}
+                       ref={videoRef}
                        playsInline={true}
-                       controls={true}
-                       title={title || title_en || ''}/>)}
+                       controls={video_controls}
+                       muted={video_muted || video_autoplay}
+                       loop={video_loop}
+                       autoPlay={video_autoplay}
+                       width={video_width}
+                       height={video_height}
+                       title={title || title_en || ''}
+                       poster={video_poster}
+                       onClick={playVideo}
+                       onPlay={updateVideoState}
+                       onPause={updateVideoState}
+                       onCanPlay={updateVideoState}
+                    />
+                </div>
             </div>
         }
         {!!images &&
@@ -178,7 +235,14 @@ export const query = graphql`
                   )
               }
           }
-          videos
+          video_path
+          video_poster
+          video_width
+          video_height
+          video_muted
+          video_loop
+          video_autoplay
+          video_controls
       }
   }
 `
