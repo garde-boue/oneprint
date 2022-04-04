@@ -1,8 +1,49 @@
 @use "sass:math";
-@import "https://www.cnap.fr/sites/faune/styles/faune-fontes.css";
+
+@font-face {
+  font-family: Faune;
+  src: url(./fonts/faune/Faune-Text_Italic.eot);
+  src: url(./fonts/faune/Faune-Text_Italic.eot?#iefix) format("embedded-opentype"),
+  url(./fonts/faune/Faune-Text_Italic.woff2) format("woff2"),
+  url(./fonts/faune/Faune-Text_Italic.woff) format("woff"),
+  url(./fonts/faune/Faune-Text_Italic.ttf) format("truetype"),
+  url(./fonts/faune/Faune-Text_Italic.svg#Faune-Text_Italic) format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Faune;
+  src: url(./fonts/faune/Faune-Display_Black.eot);
+  src: url(./fonts/faune/Faune-Display_Black.eot?#iefix) format("embedded-opentype"),
+  url(./fonts/faune/Faune-Display_Black.woff2) format("woff2"),
+  url(./fonts/faune/Faune-Display_Black.woff) format("woff"),
+  url(./fonts/faune/Faune-Display_Black.ttf) format("truetype"),
+  url(./fonts/faune/Faune-Display_Black.svg#Faune-Display_Black) format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Faune;
+  src: url(./fonts/faune/Faune-Display_Bold_Italic.eot);
+  src: url(./fonts/faune/Faune-Display_Bold_Italic.eot?#iefix) format("embedded-opentype"),
+  url(./fonts/faune/Faune-Display_Bold_Italic.woff2) format("woff2"),
+  url(./fonts/faune/Faune-Display_Bold_Italic.woff) format("woff"),
+  url(./fonts/faune/Faune-Display_Bold_Italic.ttf) format("truetype"),
+  url(./fonts/faune/Faune-Display_Bold_Italic.svg#Faune-Display_Bold_Italic) format("svg");
+  font-weight: 700;
+  font-style: italic
+}
+
+$purple:#B300DA;
 
 html, body{
   font-family: 'Faune', sans-serif;
+  font-weight: 900;
+  font-style: normal;
   font-size: 16px;
   line-height: 1.125em;
   padding: 0;
@@ -10,8 +51,8 @@ html, body{
 }
 
 ::selection{
-  background: #ccc;
-  color:#999;
+  background: #f0f0f0;
+  color:$purple;
 }
 
 .layout{
@@ -38,7 +79,7 @@ a{
     &__link{
       text-decoration: none;
       &:hover{
-        color:#666;
+        color:$purple;
       }
     }
     .week-selector{
@@ -69,7 +110,7 @@ a{
           color: #000 !important;
         }
         &:hover,&:focus,&:active{
-          outline: #ccc dotted 2px;
+          outline: $purple dotted 2px;
           outline-offset: 8px;
         }
       }
@@ -101,16 +142,38 @@ a{
     font-weight: normal;
     font-style: italic;
     padding: 0;
-    margin: 1em 0;
+    margin: 1em 0 0;
+  }
+  em{
+    font-weight: normal;
+    font-style: italic;
+    color:$purple;
+  }
+  strong{
+    font-weight: 900;
+    font-style: normal;
+    color:$purple;
+  }
+  em strong, strong em{
+    font-weight: 700;
+    font-style: italic;
   }
   video{
     display: block;
+    max-width: 100%;
+    height:auto;
+    background: #333;
   }
   &__instagram{
     display: flex;
+    flex-wrap: wrap;
+    max-width:100%;
+    width:25em;
+    margin: 16px -4px;
+    line-height: 16px;
     &__icon{
-      margin: auto 0 0 -8px;
-      padding: 8px;
+      margin: auto 0 0;
+      padding: 0 4px 0;
       width: 16px;
       height: 16px;
       line-height: 16px;
@@ -122,17 +185,21 @@ a{
         width: 16px;
         height: 16px;
         display: inline-block;
+        border-radius: 4px;
+      }
+      &:hover:before{
+        background: $purple;
       }
     }
     &__hashtag{
-      margin: auto 0 0 -8px;
-      padding: 8px;
+      margin: auto 0 0 0;
+      padding: 0 4px 0;
       font-weight: normal;
       font-style: italic;
       text-decoration: none;
     }
     a:hover{
-      opacity: .5;
+      color:$purple;
     }
   }
   &__titles,
@@ -154,7 +221,7 @@ a{
     &--link{
       &:hover{
         span{
-          color:#666;
+          color:$purple;
         }
       }
     }
@@ -176,14 +243,65 @@ a{
     display: flex;
     flex-wrap: wrap;
     margin: 1.5em -1.5em 0;
+    flex:1;
   }
   &__videos + &__images{
     margin: 0 -1.5em 0;
   }
-  &__image, &__video{
+  &__video{
+    position: relative;
+    flex:1;
+    &__placeholder{
+      flex:1;
+      width:100%;
+      position: relative;
+      > div{
+        position: relative;
+        width: 100%;
+      }
+    }
+    video{
+      position: absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+    }
+    &[data-controls="no"]{
+      > div:after{
+        font-family: sans-serif;
+        pointer-events: none;
+        content:'▶︎';
+        position: absolute;
+        font-size: 40px;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        padding: 0 0 0 .2em;
+        box-sizing: border-box;
+        background-color: $purple;
+        color:#fff;
+        border-radius: 100%;
+        margin: auto;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        transition: .3s;
+      }
+      &[data-playing="yes"] > div:after{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &__image, &__video {
     display: flex;
     padding: 1.5em 1.5em 1.5em;
     box-sizing: border-box;
+  }
+  &__image{
     @for $i from 1 through 12{
       &--#{$i}{
         width: percentage(math.div($i,12));
@@ -191,8 +309,10 @@ a{
     }
     .gatsby-image-wrapper{
       display: flex;
+      margin: auto 0 0 0;
       > div{
         margin: auto 0 0 0;
+        position: relative;
       }
       [data-main-image]{
         max-width: 100%;
@@ -207,6 +327,7 @@ a{
 .footer{
   padding: 30vh 0 0;
   font-style: italic;
+  font-weight: normal;
   strong, a{
     font-weight: 900;
     font-style: normal;
@@ -247,10 +368,13 @@ a{
     }
   }
   .print {
-    &__images {
+    &__images, &__videos {
       margin: .75em -.75em;
     }
-    &__image{
+    &__videos + &__images{
+      margin: -.75em -.75em .75em;
+    }
+    &__image, &__video{
       padding: .75em .75em .75em;
       width: 100%;
       @for $i from 1 through 6{

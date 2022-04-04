@@ -6,7 +6,7 @@ date: 2022-02-14
 date_to: 2022-02-20
 images: [images/003-1.jpg,images/003-2.jpg]
 instagram:
-hashtags: []
+hashtags: [1printaweek,anneemiliephilippe]
 preview: ignore
 ---
 Impression de cils, mascara sur coton ouaté, 

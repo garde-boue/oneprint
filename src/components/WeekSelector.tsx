@@ -2,15 +2,15 @@ import React, {BaseSyntheticEvent, Key} from "react";
 import {graphql, navigate, StaticQuery} from "gatsby";
 
 const WeekSelector = ()=> {
-    function selectItem(e:BaseSyntheticEvent){
+    async function selectItem(e:BaseSyntheticEvent){
         const week = e.target.value
         const printEl = document.querySelector(`[data-week="${week}"]`)
         if(week==='/'){
-            navigate(`/`).finally()
+            await navigate(`/`)
         }else if(printEl){
             printEl.scrollIntoView();
         }else{
-            navigate(`/week/${week}`).finally()
+            await navigate(`/week/${week}`)
         }
     }
     return <form className={"week-selector"}>
