@@ -4,8 +4,8 @@ title_en: Snow
 week: 9
 date: 2022-03-29
 date_to: 2022-04-03
-images: [images/009-1.jpg]
-videos: [/video/009-2.mp4]
+images: [images/009-1.jpg][images/009-2.jpg]
+videos: 
 hashtags: [1printaweek]
 instagram: 
 preview: ignore
