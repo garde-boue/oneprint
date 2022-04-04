@@ -16,6 +16,6 @@ preview: ignore
 Impression risographique sur Olin Bulk 80g
 20cm x 29,7cm, 35 tirages.
 
-Mains négatives dans la poudreuse, cette semaine il a neigé. 
+> Mains négatives dans la poudreuse, cette semaine il a neigé. 
 
 
