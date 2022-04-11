@@ -13,7 +13,7 @@ preview: ignore
 
 Risographie 3 couleurs, sur Start Fabriano 120g, 35 exemplaires.
 
-> Certains insectes roulent les feuilles des arbres comme des cigares, ils construisent des sortes de maisons à manger et pondent leur oeufs dedans. Ces objets témoignent d'un incroyable savoir-faire, peut-on considérer qu'ils y insuflent un sens artistique ?
+> Certains insectes roulent les feuilles des arbres comme des cigares, ils construisent des sortes de maisons à manger et pondent leur œufs dedans. Ces objets témoignent d'un incroyable savoir-faire, peut-on considérer qu'ils y insuflent un sens artistique ?
 
 
 
