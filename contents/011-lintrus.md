@@ -11,8 +11,8 @@ instagram:
 preview: ignore
 ---
 
-Photocopie rehaussée, 10 tirages sur Canon FC220.
+Photocopie rehaussée, 9 tirages sur papier dessin Tesco 120g .
 
-> Une collection posée sur l'antique photocopieur familial, rehaussée avec les Crayola et les feutres Conté de mon enfance.
+> Une collection posée sur l'antique photocopieur Canon FC220 familial, rehaussée avec les Crayola et les feutres Conté de mon enfance.
 
 
