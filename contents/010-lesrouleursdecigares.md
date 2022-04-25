@@ -7,7 +7,7 @@ date_to: 2022-04-10
 images: [images/010-1.jpg,images/010-2.jpg ]
 videos: 
 hashtags: [1printaweek]
-instagram: 
+instagram: https://www.instagram.com/p/CcNO6kdLiqX/
 preview: ignore
 ---
 
