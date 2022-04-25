@@ -1,5 +1,5 @@
 ---
-title: Sous l'eau (manger les algues)
+title: Sous l'eau 
 title_en: eat the sea weed 
 week: 12
 date: 2022-04-18
