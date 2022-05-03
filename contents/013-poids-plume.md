@@ -1,5 +1,5 @@
 ---
-title: Politique de l'autruche 
+title: Poids plume (politique de l'autruche)
 title_en: Feather of truth
 week: 13
 date: 2022-04-25
