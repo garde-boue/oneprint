@@ -1,5 +1,5 @@
 ---
-title: Poids plume (politique de l'autruche)
+title: Poids plume 
 title_en: Feather of truth
 week: 13
 date: 2022-04-25
@@ -15,7 +15,7 @@ Photocopie sur calque, 12 tirages sur photocopieur Canon FC220, format A4.
 
 > La plume d'autruche est l'attribut de la déesse égyptienne Ma'at, déesse de l'harmonie cosmique, de l'équilibre du monde, de l'équité, de la paix et de la justice. 
 >
-> Bonne journée internationale des travailleuses et des travailleurs.
+> Poids plumes VS politique de l'autruche, bonne journée internationale des travailleuses et des travailleurs.
 >
 > 
 
