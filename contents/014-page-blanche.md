@@ -2,10 +2,9 @@
 title: Page blanche 
 title_en: Blank page
 week: 14
-date: 2022-04-25
-date_to: 2022-05-01
-images: [images/04.jpg]
-videos: 
+date: 2022-05-02
+date_to: 2022-05-08
+images: [images/014.jpg]
 hashtags: [1printaweek]
 instagram: 
 preview: ignore
