@@ -13,7 +13,7 @@ preview: ignore
 
 
 
-Photocopie defeuille A4 sur feuille A3 quadrillée, impression à la demande, open edition.
+Photocopie de feuille A4 sur feuille A3 quadrillée, impression à la demande, open edition.
 
 > Pagina vuota... à la fin de la semaine, je pars à Rome pour une résidence de recherche de 3 mois.
 
