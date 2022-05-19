@@ -16,5 +16,7 @@ preview: ignore
 Impression en risographie , 45 exemplaires.
 
 > J'ai toujours entendu les Saintes glaces (holy ice) depuis petite, féminiser cette période  de retour des gelées et la considérer comme précieuse, voilà ce qui me semblait naturelle. En réalité, il s'agit des Saints de glace. Je suis nostalgique de notre retard, en tout, et cette année, il n'a pas gelé.
+>
+> Ces cristaux dingo' ont photographié dans le Jura.
 
 
