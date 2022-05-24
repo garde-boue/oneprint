@@ -13,7 +13,7 @@ preview: ignore
 
 
 
-Sérigraphie sur étoffe argenté, 23cmx23cm, 4 exemplaires.
+Sérigraphie sur étoffe argentée, 23cmx23cm, 4 exemplaires.
 
 > Cette semaine, j'ai commencé mon "enquête" sur les femmes oubliées ou effacées de l'histoire à Rome, cette statue rencontrée lors de ma recherche en est la métaphore.
 >
