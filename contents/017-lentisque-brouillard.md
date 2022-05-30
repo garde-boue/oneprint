@@ -13,7 +13,7 @@ preview: ignore
 
 
 
-Photocopie jet d'encre sur vieille imprimante présente à la résidence Wicar à Rome, 5 tirages.
+Photocopie jet d'encre sur vieille imprimante Epson de l'atelier Wicar à Rome, 5 tirages.
 
 > J'ai cueilli du lentisque à la villa Medici, photographié Aphrodite cassée, récupéré un fragment de brouillard pris dans du verre et fait virer des cyanotypes avec du café, tous ça coexiste dans ce paysage photocopié de manière cheap en jet d'encre quadrillé de cyan.
 >
