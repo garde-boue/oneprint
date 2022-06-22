@@ -15,4 +15,4 @@ preview: ignore
 
 Impression avec le soleil sur papier Clairefontaine fluo, 5 exemplaires.
 
-> Ce court poème apparaît à la surface du papier au bout d'une semaine à Rome. 
+> À Rome, les poèmes poussent en une semaine au soleil.
