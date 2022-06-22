@@ -15,4 +15,6 @@ preview: ignore
 
 Impression avec le soleil sur papier Clairefontaine fluo, 5 exemplaires.
 
-> À Rome, les poèmes poussent en une semaine au soleil.
+> À Rome, les poèmes poussent en une semaine au soleil. 
+>
+> Ils disparaîtront comme ils sont venus, usés par les rayons.
