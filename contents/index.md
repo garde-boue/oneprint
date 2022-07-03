@@ -34,10 +34,10 @@ tissu ou d’autres supports pour prendre corps par différentes techniques,
 certaines peu conventionnelles ou même farfelues.
 Pas de format imposé dans cet ensemble, 
 le nombre d’exemplaires varient selon la technique d’impression, 
-de 5 exemplaires à 40 ou même en open edition.
+de 4 exemplaires à 40 ou même en open edition.
 
 Les variations, les accidents sont embrassées avec joie, 
-il ne s’agit pas d’un travail reproductif mais plutôt de l’expérience de possibles,
+il ne s’agit pas seulement d’un travail reproductif mais plutôt de l’expérience de possibles,
 c’est pourquoi je parlerais parfois de tirages plutôt que d’exemplaires dans la légende.
 
 Ce corpus constituera un ensemble qui, je l'espère, viendra ajouter de la beauté hebdomadaire à nos existences humaines.
