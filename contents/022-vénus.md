@@ -1,9 +1,9 @@
 ---
 title: Accroupie (Vénus au bain) 
 title_en: Venus in the bath
-week: 21
-date: 2022-06-20
-date_to: 2022-06-26
+week: 22
+date: 2022-06-27
+date_to: 2022-07-03
 images: [images/022.jpg]
 videos: 
 hashtags: [1printaweek]
