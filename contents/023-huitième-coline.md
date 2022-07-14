@@ -15,4 +15,4 @@ preview: ignore
 
 Cyanotype sur feuille de papier de soie trouvées, 5 tirages.
 
-> J'ai trouvé dans le débarras à l'atelier Wicar une plaque de verre brumeuse en forme de coline puis j'ai cueilli des plantes dans les jardins de magnifiques villas pour composer cette image sous le soleil brûlant de Rome.
+> J'ai trouvé dans le débarras à l'atelier Wicar ces feuilles de papier de soie, une plaque de verre brumeuse en forme de coline puis j'ai cueilli du lentisque dans les jardins de magnifiques villas pour composer cette image sous le soleil brûlant de Rome. 
