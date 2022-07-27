@@ -13,6 +13,6 @@ preview: ignore
 
 
 
-Impression discographique, 2 passages, 50 exemplaires.
+Impression risographique, 2 passages, 50 exemplaires.
 
 > Il ya beaucoup de coquelicots dans la ville à Rome comme d'autres "mauvaises herbes". Ils étaient en fleur à mon arrivée en mai, beaucoup plus tôt qu'en France. 
