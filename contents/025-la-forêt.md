@@ -13,6 +13,6 @@ preview: ignore
 
 
 
-Impression risographique, 2 passages, 50 exemplaires.
+Impression risographique, 2 passages, 20 cm x 20 cm, 50 exemplaires.
 
 > 
