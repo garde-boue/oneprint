@@ -4,7 +4,7 @@ title_en: glove ghost
 week: 26
 date: 2022-07-25
 date_to: 2022-07-31
-images: [images/025.jpg]
+images: [images/026-1.jpg,images/026-2.jpg]
 videos: 
 hashtags: [1printaweek]
 instagram: 
