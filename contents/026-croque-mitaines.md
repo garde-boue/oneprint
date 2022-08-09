@@ -17,6 +17,6 @@ Impression risographique, 2 passages, A3, 40 exemplaires.
 
 
 
-> Une image ancienne prise dans un PMU près du cimetière du père Lachaise.
+> Une image ancienne prise dans un PMU près du cimetière du père Lachaise. Imprimé avec Risoroma à l'atelier de Numéro chromatico à Rome.
 >
-> Je prends une pause estivale tout le mois d'août ! Je publierais les images à posteriori. Bel été. 
+> Je prends une pause estivale tout le mois d'août ! Je publierais les images à posteriori. Bel été ! 
