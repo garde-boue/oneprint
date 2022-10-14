@@ -8,4 +8,4 @@ instagram:
 hashtags: [1printaweek,anneemiliephilippe]
 preview: ignore
 ---
-Sérigraphie deux couleurs sur Rivoli 300g, 20 tirages, 23cm x 24,5cm.
+Sérigraphie deux couleurs sur Rivoli 300g, 6 tirages, 23cm x 24,5cm.
