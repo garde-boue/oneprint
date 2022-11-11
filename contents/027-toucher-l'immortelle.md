@@ -19,4 +19,4 @@ Sérigraphie 3 passages, argent, brun et jaune, 32cmx45cm, 8 exemplaires.
 
 > Un souvenir d'été pour accueillir l'automne.
 >
-> Me voici avec dix images de retard, la pause estivale ayant enchaînée avec une rentrée chargée où ilm'était difficile de poursuivre avec la même régularité. Cette petite entorse à mon protocole sera rattrapé dès que possible.
+> Me voici avec quelques images de retard, la pause estivale ayant enchaînée avec une rentrée chargée où il m'était difficile de poursuivre avec la même régularité. J'ai pris la décision de revoir mon protocole et de ne plus m'imposer un print par semaine mais je continue le projet !
