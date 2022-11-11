@@ -9,7 +9,7 @@ il débute en février et s’achèvera l’année prochaine.
 
 
 
-Chaque semaine, j’imprime une image.
+Chaque semaine (ou presque), j’imprime une image.
 
 Une image tirée de mon fonds photographique, 
 celui que je constitue chaque jour ou presque. 
