@@ -13,8 +13,10 @@ preview: ignore
 
 
 
-Sérigraphie d'une chute de cuir en typon direct sur soie, réalisation finale à venir, écharpe test. Format final 70cmx70cm. Édition de 7 carrés de soie.
+Sérigraphie d'une chute de cuir en typon direct sur bande de soie. 
 
-> J'ai travaillé à l'atelier et parmi les chutes de cuir après les coupes de mon père se trouvait cette main à 7 doigts si souple, une main velours, M. l'a vu le premier et j'ai eu envie d'en faire un motif fluide sur de la soie. Parfois les formes jaillissent de gestes "désintéressés" ou plutôt faits dans un autre but, c'est une sorte de contrechamp du geste.
+> J'ai travaillé à l'atelier et parmi les chutes de cuir après les coupes de mon père se trouvait cette main à 7 doigts si souple, une main velours. J'ai eu envie d'en faire un motif fluide sur de la soie. 
 >
-> Je mettrais d'autres photos dès que l'impression finale aura été réalisée.
+> Parfois les formes jaillissent de gestes "désintéressés" ou plutôt de gestes faits dans un autre but, comme une sorte de contrechamp du geste.
+>
+> 
