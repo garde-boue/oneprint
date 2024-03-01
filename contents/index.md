@@ -1,6 +1,6 @@
 ---
 id: index
-title: One print a week • Une image par semaine
+title: One print again • Encore une image
 date: 2022-02-01
 ---
 
