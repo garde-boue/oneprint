@@ -16,10 +16,11 @@ const WeekSelector = ()=> {
     return <form className={"week-selector"}>
         <StaticQuery query={graphql`
                     query{
-                        prints:allMarkdownRemark(
-                            filter: {frontmatter: {week: {gt: 0}, preview: {ne: "yes"}}}
-                            sort: {fields: frontmatter___week, order: DESC}
-                        ) {
+  prints: allMarkdownRemark(
+    filter: {frontmatter: {week: {gt: 0}, preview: {ne: "yes"}}}
+    sort: {frontmatter: {week: DESC}}
+  ) {
+
                             nodes {
                                 frontmatter{
                                     week
