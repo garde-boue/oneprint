@@ -37,7 +37,7 @@ const IndexPage = ({data}:IndexPageProps) => {
 export default IndexPage
 
 export const pageQuery = graphql`
-    query {
+    query IndexPage {
         index:markdownRemark(frontmatter: {id: {eq: "index"}}) {
             frontmatter {
                 title

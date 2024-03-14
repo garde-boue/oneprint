@@ -1,10 +1,10 @@
-import React from "react"
+import React, {FC, PropsWithChildren} from "react"
 import "../styles/styles.scss"
 import Footer from "./Footer";
 import {Link} from "gatsby";
 import WeekSelector from "./WeekSelector";
 
-export default function MainLayout({ children }) {
+const MainLayout:FC<PropsWithChildren> = ({ children }) => {
     const title = 'One print a week • Une image par semaine';
 
     return (
@@ -19,6 +19,4 @@ export default function MainLayout({ children }) {
     )
 }
 
-export function wrapPageElement({element,props}){
-    return <MainLayout {...props}>{element}</MainLayout>;
-}
+export default MainLayout

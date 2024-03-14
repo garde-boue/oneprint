@@ -1,5 +1,7 @@
-/** @type {import('gatsby').GatsbyConfig} */
-module.exports = {
+import {GatsbyConfig} from "gatsby";
+
+const config:GatsbyConfig =  {
+  graphqlTypegen: true,
   siteMetadata: {
     title: `One print a week • Une image par semaine`,
     description: `1 print a week est un projet mené sur l’année 2022, il débute en février et s’achèvera l’année prochaine. Chaque semaine, j’imprime une image.`,
@@ -34,3 +36,5 @@ module.exports = {
     },
   ]
 };
+
+export default config;
