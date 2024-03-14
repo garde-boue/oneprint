@@ -6,10 +6,8 @@ module.exports = {
     siteUrl: `https://oneprint.anem.name`
   },
   plugins: [
-    'gatsby-plugin-netlify',
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

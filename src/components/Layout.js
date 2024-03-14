@@ -1,5 +1,4 @@
 import React from "react"
-import {Helmet} from "react-helmet"
 import "../styles/styles.scss"
 import Footer from "./Footer";
 import {Link} from "gatsby";
@@ -10,12 +9,6 @@ export default function MainLayout({ children }) {
 
     return (
         <div className={`layout`}>
-            <Helmet htmlAttributes={{
-                lang: 'fr',
-                title: title
-            }}>
-                <meta property="og:locale" content="fr_FR" />
-            </Helmet>
             <div className="intro__title">
                 <Link to={"/"} className={"intro__title__link"}>{title}</Link>
                 <WeekSelector />

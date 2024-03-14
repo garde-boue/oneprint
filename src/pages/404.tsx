@@ -1,17 +1,23 @@
-import * as React from "react"
-import {Link} from "gatsby"
+import React from 'react';
+import {HeadFC, Link} from 'gatsby';
 
 // markup
 const NotFoundPage = () => {
-    return (
-        <div className={"page"}>
+  return (
+        <div className={'page'}>
             <title>Page non trouvée</title>
             <div className="intro">
-                <h1 className={"intro__title"}>Page non trouvée, désolé…</h1>
-                <p><Link to={"/"}>revenir à la page d'accueil.</Link></p>
+                <h1 className={'intro__title'}>Page non trouvée, désolé…</h1>
+                <p><Link to={'/'}>revenir à la page d'accueil.</Link></p>
             </div>
         </div>
+  );
+};
+
+export default NotFoundPage;
+
+export const Head:HeadFC = () => {
+    return (
+        <title>Page non trouvée</title>
     )
 }
-
-export default NotFoundPage
