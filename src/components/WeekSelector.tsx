@@ -1,12 +1,12 @@
 import React, {BaseSyntheticEvent, Key} from "react";
-import {graphql, navigate, StaticQuery, useStaticQuery} from "gatsby";
+import {graphql, navigate, useStaticQuery} from "gatsby";
 
 const WeekSelector = ()=> {
     async function selectItem(e:BaseSyntheticEvent){
         const week = e.target.value
         const printEl = document.querySelector(`[data-week="${week}"]`)
-        if(week==='/'){
-            await navigate(`/`)
+        if(week==='/' || week==='/list'){
+            await navigate(week)
         }else if(printEl){
             printEl.scrollIntoView();
         }else{
@@ -30,7 +30,8 @@ const WeekSelector = ()=> {
     }`)
     return <form className={"week-selector"}>
         <select id={"select-nav"} onChange={selectItem}>
-            <option value={"/"}>Voir tout</option>
+            <option value={"/"}>Voir tout d'un coup</option>
+            <option value={"/list"}>Voir tout en détail</option>
             {prints.nodes.map((print, key: Key) => {
                 const {title, title_en, week=""} = {...print.frontmatter}
                 return <option key={key} value={week||""}>{prints.nodes.length-(key as number)} → {[title, title_en].filter(t => !!t).join(' • ')}</option>

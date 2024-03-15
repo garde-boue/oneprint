@@ -5,7 +5,7 @@ import {Link} from "gatsby";
 import WeekSelector from "./WeekSelector";
 
 const MainLayout:FC<PropsWithChildren> = ({ children }) => {
-    const title = 'One print a week • Une image par semaine';
+    const title = 'One print again • Encore une image';
 
     return (
         <div className={`layout`}>
