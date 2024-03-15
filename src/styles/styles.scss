@@ -234,6 +234,23 @@ a{
       font-weight: normal;
     }
   }
+  &__order{
+    padding-top: 16px;
+    .button{
+      background: $purple;
+      display: inline-flex;
+      width: auto;
+      appearance: none;
+      border: none;
+      padding: 0.1em 0.25em;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover{
+        background: darken($purple,10%);
+      }
+    }
+  }
   &__week{
     font-size: 1em;
     font-weight: 900;

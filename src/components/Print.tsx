@@ -133,6 +133,9 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
             <h1 className={"print__titles"}>{title_elements}</h1>
         }
         <div className="print__content" dangerouslySetInnerHTML={{__html:html}} />
+        <div className={"print__order"}>
+            <button className={"button"}>Order item</button>
+        </div>
         <nav className="print__instagram">
             {instagram && <a href={instagram} target={"_blank"} className={"print__instagram__icon"} rel={"noopener,noopener"} aria-label={"Instagram"} />}
             {(hashtags||['1printaweek']).map((hashtag,key:Key)=>
