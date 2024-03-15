@@ -1,4 +1,4 @@
-# One print a week • Une image par semaine
+# One print again • Encore une image
 
 > Retrouvez toutes les publications directement sur le site [oneprint](https://oneprint.anem.name) 
 > ou sur Instagram [#1printaweek](https://www.instagram.com/explore/tags/1printaweek/).
