@@ -4,6 +4,7 @@ title_en: Testa test
 week: 19
 date: 2022-06-06
 date_to: 2022-06-12
+poster: images/019-1.jpg
 images: [images/019-1.jpg]
 videos: 
 hashtags: [1printaweek]

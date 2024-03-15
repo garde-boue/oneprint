@@ -4,6 +4,7 @@ title_en: Holy
 week: 15
 date: 2022-05-09
 date_to: 2022-05-15
+poster: images/015.jpg
 images: [images/015.jpg]
 videos: 
 hashtags: [1printaweek]

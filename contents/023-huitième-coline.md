@@ -4,6 +4,7 @@ title_en: the eighth hill
 week: 23
 date: 2022-07-04
 date_to: 2022-07-10
+poster: images/023.jpg
 images: [images/023.jpg]
 videos: 
 hashtags: [1printaweek]

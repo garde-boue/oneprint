@@ -4,6 +4,7 @@ title_en: the unseen
 week: 38
 date: 2024-02-29
 date_to: 2023-03-07
+poster: images/029.jpg
 images: [images/029.jpg]
 videos: 
 hashtags: [1printaweek]

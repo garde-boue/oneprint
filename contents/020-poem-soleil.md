@@ -4,6 +4,7 @@ title_en: sun poem
 week: 20
 date: 2022-06-13
 date_to: 2022-06-19
+poster: images/020.jpg
 images: [images/020.jpg]
 videos: 
 hashtags: [1printaweek]

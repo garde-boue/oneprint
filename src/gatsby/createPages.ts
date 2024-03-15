@@ -22,7 +22,6 @@ const createPages:GatsbyNode["createPages"] = async ({ graphql, actions }) => {
     results.data?.prints.nodes.forEach((print: { id:string, frontmatter:{week:string} }) => {
         const { id } = print;
         const { week="" } = {...print.frontmatter};
-        console.log(`createPage: /week/${week}`);
         createPage({
             path: `/week/${week}`,
             component: PrintPage,

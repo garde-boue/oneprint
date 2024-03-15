@@ -4,6 +4,7 @@ title_en: Mary in the woods
 week: 25
 date: 2022-07-18
 date_to: 2022-07-24
+poster: images/025.jpg
 images: [images/025.jpg]
 videos: 
 hashtags: [1printaweek]

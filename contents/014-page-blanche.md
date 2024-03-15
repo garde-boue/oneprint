@@ -4,6 +4,7 @@ title_en: Blank page
 week: 14
 date: 2022-05-02
 date_to: 2022-05-08
+poster: images/014.jpg
 images: [images/014.jpg]
 hashtags: [1printaweek]
 instagram: 

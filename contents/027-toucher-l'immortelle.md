@@ -4,6 +4,7 @@ title_en: murza
 week: 36
 date: 2022-10-03
 date_to: 2022-10-09
+poster: images/027.jpg
 images: [images/027.jpg,images/027-2.jpg ]
 videos: 
 hashtags: [1printaweek]

@@ -4,6 +4,7 @@ title_en: poppies
 week: 24
 date: 2022-07-11
 date_to: 2022-07-17
+poster: images/024.jpg
 images: [images/024.jpg]
 videos: 
 hashtags: [1printaweek]

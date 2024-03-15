@@ -604,6 +604,7 @@ type MarkdownRemarkFrontmatter {
     id: String
     images: [File]
     instagram: String
+    poster: File
     preview: String
     title: String
     title_en: String
@@ -705,7 +706,7 @@ type Query {
     imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, gatsbyImageData: GatsbyImageDataQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput): ImageSharp
     markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MarkdownRemarkFrontmatterFilterInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, rawMarkdownBody: StringQueryOperatorInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
     mdx(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, tableOfContents: JSONQueryOperatorInput): Mdx
-    site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, graphqlTypegen: BooleanQueryOperatorInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, jsxRuntime: StringQueryOperatorInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, trailingSlash: StringQueryOperatorInput): Site
+    site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, graphqlTypegen: SiteGraphqlTypegenFilterInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, jsxRuntime: StringQueryOperatorInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, trailingSlash: StringQueryOperatorInput): Site
     siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
     siteFunction(absoluteCompiledFilePath: StringQueryOperatorInput, children: NodeFilterListInput, functionRoute: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, matchPath: StringQueryOperatorInput, originalAbsoluteFilePath: StringQueryOperatorInput, originalRelativeFilePath: StringQueryOperatorInput, parent: NodeFilterInput, pluginName: StringQueryOperatorInput, relativeCompiledFilePath: StringQueryOperatorInput): SiteFunction
     sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, pageContext: JSONQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput): SitePage
@@ -724,7 +725,7 @@ type Site implements Node {
         locale: String
     ): Date
     children: [Node!]!
-    graphqlTypegen: Boolean
+    graphqlTypegen: SiteGraphqlTypegen
     host: String
     id: ID!
     internal: Internal!
@@ -848,6 +849,12 @@ type SiteFunctionGroupConnection {
     pageInfo: PageInfo!
     sum(field: SiteFunctionFieldSelector!): Float
     totalCount: Int!
+}
+
+type SiteGraphqlTypegen {
+    documentSearchPaths: [String]
+    generateOnBuild: Boolean
+    typesOutputPath: String
 }
 
 type SiteGroupConnection {
@@ -1678,6 +1685,7 @@ input MarkdownRemarkFrontmatterFieldSelector {
     id: FieldSelectorEnum
     images: FileFieldSelector
     instagram: FieldSelectorEnum
+    poster: FileFieldSelector
     preview: FieldSelectorEnum
     title: FieldSelectorEnum
     title_en: FieldSelectorEnum
@@ -1699,6 +1707,7 @@ input MarkdownRemarkFrontmatterFilterInput {
     id: StringQueryOperatorInput
     images: FileFilterListInput
     instagram: StringQueryOperatorInput
+    poster: FileFilterInput
     preview: StringQueryOperatorInput
     title: StringQueryOperatorInput
     title_en: StringQueryOperatorInput
@@ -1720,6 +1729,7 @@ input MarkdownRemarkFrontmatterSortInput {
     id: SortOrderEnum
     images: FileSortInput
     instagram: SortOrderEnum
+    poster: FileSortInput
     preview: SortOrderEnum
     title: SortOrderEnum
     title_en: SortOrderEnum
@@ -1866,7 +1876,7 @@ input SiteBuildMetadataSortInput {
 input SiteFieldSelector {
     buildTime: FieldSelectorEnum
     children: NodeFieldSelector
-    graphqlTypegen: FieldSelectorEnum
+    graphqlTypegen: SiteGraphqlTypegenFieldSelector
     host: FieldSelectorEnum
     id: FieldSelectorEnum
     internal: InternalFieldSelector
@@ -1882,7 +1892,7 @@ input SiteFieldSelector {
 input SiteFilterInput {
     buildTime: DateQueryOperatorInput
     children: NodeFilterListInput
-    graphqlTypegen: BooleanQueryOperatorInput
+    graphqlTypegen: SiteGraphqlTypegenFilterInput
     host: StringQueryOperatorInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
@@ -1935,6 +1945,24 @@ input SiteFunctionSortInput {
     parent: NodeSortInput
     pluginName: SortOrderEnum
     relativeCompiledFilePath: SortOrderEnum
+}
+
+input SiteGraphqlTypegenFieldSelector {
+    documentSearchPaths: FieldSelectorEnum
+    generateOnBuild: FieldSelectorEnum
+    typesOutputPath: FieldSelectorEnum
+}
+
+input SiteGraphqlTypegenFilterInput {
+    documentSearchPaths: StringQueryOperatorInput
+    generateOnBuild: BooleanQueryOperatorInput
+    typesOutputPath: StringQueryOperatorInput
+}
+
+input SiteGraphqlTypegenSortInput {
+    documentSearchPaths: SortOrderEnum
+    generateOnBuild: SortOrderEnum
+    typesOutputPath: SortOrderEnum
 }
 
 input SitePageFieldSelector {
@@ -2048,7 +2076,7 @@ input SiteSiteMetadataSortInput {
 input SiteSortInput {
     buildTime: SortOrderEnum
     children: NodeSortInput
-    graphqlTypegen: SortOrderEnum
+    graphqlTypegen: SiteGraphqlTypegenSortInput
     host: SortOrderEnum
     id: SortOrderEnum
     internal: InternalSortInput

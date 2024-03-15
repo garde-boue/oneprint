@@ -4,6 +4,7 @@ title_en: Fatal
 week: 16
 date: 2022-05-16
 date_to: 2022-05-22
+poster: images/016.jpg
 images: [images/016.jpg]
 videos: 
 hashtags: [1printaweek]

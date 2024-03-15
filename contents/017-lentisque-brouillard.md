@@ -4,6 +4,7 @@ title_en: Lentic fog
 week: 17
 date: 2022-05-23
 date_to: 2022-05-29
+poster: images/017.jpg
 images: [images/017.jpg]
 videos: 
 hashtags: [1printaweek]

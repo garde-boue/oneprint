@@ -4,6 +4,7 @@ title_en: foot arm boob
 week: 21
 date: 2022-06-20
 date_to: 2022-06-26
+poster: images/021.jpg
 images: [images/021.jpg]
 videos: 
 hashtags: [1printaweek]

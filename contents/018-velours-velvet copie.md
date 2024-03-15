@@ -4,6 +4,7 @@ title_en: Velvet
 week: 18
 date: 2022-05-30
 date_to: 2022-06-05
+poster: images/018-1.jpg
 images: [images/018-1.jpg, images/018-2.jpg]
 videos: 
 hashtags: [1printaweek]

@@ -4,6 +4,7 @@ title_en: 人 人 人 human beings
 week: 7
 date: 2022-03-14
 date_to: 2022-03-20
+poster: images/007-1.jpg
 images: [images/007-1.jpg,images/007-2.jpg]
 hashtags: [1printaweek,anneemiliephilippe]
 instagram:

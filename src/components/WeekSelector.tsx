@@ -1,5 +1,5 @@
 import React, {BaseSyntheticEvent, Key} from "react";
-import {graphql, navigate, StaticQuery} from "gatsby";
+import {graphql, navigate, StaticQuery, useStaticQuery} from "gatsby";
 
 const WeekSelector = ()=> {
     async function selectItem(e:BaseSyntheticEvent){
@@ -13,33 +13,29 @@ const WeekSelector = ()=> {
             await navigate(`/week/${week}`)
         }
     }
+    const { prints} = useStaticQuery<Queries.WeekSelectorQuery>(graphql`           
+        query WeekSelector {
+        prints: allMarkdownRemark(
+            filter: {frontmatter: {week: {gt: 0}, preview: {ne: "yes"}}}
+            sort: {frontmatter: {week: DESC}}
+        ) {
+            nodes {
+                frontmatter{
+                    week
+                    title
+                    title_en
+                }
+            }
+        }
+    }`)
     return <form className={"week-selector"}>
-        <StaticQuery query={graphql`
-                    query{
-  prints: allMarkdownRemark(
-    filter: {frontmatter: {week: {gt: 0}, preview: {ne: "yes"}}}
-    sort: {frontmatter: {week: DESC}}
-  ) {
-
-                            nodes {
-                                frontmatter{
-                                    week
-                                    title
-                                    title_en
-                                }
-                            }
-                        }
-                    }
-                    `} render={(data)=>{
-            const options = data.prints.nodes;
-            return  <select id={"select-nav"} onChange={selectItem}>
-                <option value={"/"}>Toutes les semaines</option>
-                {options.map((print:any,key:Key)=>{
-                    const {title, title_en, week} = print.frontmatter
-                    return <option key={key} value={week}>{week} → {[title,title_en].filter(t=>!!t).join(' • ')}</option>
-                })}
-            </select>
-        }} />
+        <select id={"select-nav"} onChange={selectItem}>
+            <option value={"/"}>Voir tout</option>
+            {prints.nodes.map((print, key: Key) => {
+                const {title, title_en, week=""} = {...print.frontmatter}
+                return <option key={key} value={week||""}>{prints.nodes.length-(key as number)} → {[title, title_en].filter(t => !!t).join(' • ')}</option>
+            })}
+        </select>
     </form>
 }
 export default WeekSelector

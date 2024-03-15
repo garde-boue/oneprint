@@ -1,5 +1,5 @@
-import React, {BaseSyntheticEvent, Key, useRef} from "react";
-import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
+import React, {BaseSyntheticEvent, Key, MouseEventHandler, useRef} from "react";
+import {GatsbyImage, IGatsbyImageData} from "gatsby-plugin-image";
 import {graphql, Link} from "gatsby";
 
 interface PrintImageBlockProps {
@@ -8,14 +8,12 @@ interface PrintImageBlockProps {
 }
 
 const PrintImage = ({image, title=''}:PrintImageBlockProps)=>{
-    if(image){
-        const imgData = getImage(image)
-        if(imgData){
-            const {width=1920} = imgData
-            return <div className={`print__image print__image--${width/160}`}>
-                <GatsbyImage alt={title} image={imgData} />
-            </div>
-        }
+    const gatsbyImageData = image.childImageSharp.gatsbyImageData;
+    if(gatsbyImageData){
+        const {width=1920} = image.childImageSharp.original
+        return <div className={`print__image print__image--${width/160}`}>
+            <GatsbyImage alt={title} image={gatsbyImageData} />
+        </div>
     }
     return <></>
 
@@ -42,12 +40,10 @@ interface PrintFrontmatter {
     hashtags?: [string]
 }
 
-export interface PrintImageProps extends IGatsbyImageData{
+export interface PrintImageProps{
     publicURL:string
     childImageSharp:{
-        gatsbyImageData:{
-
-        }
+        gatsbyImageData: IGatsbyImageData
         original: {
             width: number
             height: number
@@ -107,7 +103,7 @@ const Print = ({print, mode='block'}:PrintBlockProps)=>{
         {title_en && <span className="print__title print__title--en" lang={"en"}>{`${title_en} `}</span>}
     </>
 
-    function playVideo(e:BaseSyntheticEvent){
+    const playVideo:MouseEventHandler = ()=>{
         if(videoRef.current && videoDivRef.current) {
             const video: HTMLVideoElement = videoRef.current,
                 playing: boolean = !(video.paused || video.ended || video.seeking || video.readyState < video.HAVE_FUTURE_DATA)

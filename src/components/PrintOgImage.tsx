@@ -1,10 +1,18 @@
 import {absUrl} from "../utils/Website";
 import React from "react";
-import {PrintBlockProps, PrintImageProps} from "./Print";
+import {PrintImageProps} from "./Print";
 
-const PrintOgImage = ({print}:PrintBlockProps) => {
+export interface PrintOgImageProps {
+    print: {
+        frontmatter: {
+            images: [PrintImageProps]
+        }
+    }
+}
+
+const PrintOgImage = ({print}:PrintOgImageProps) => {
     const {images=[]} = print.frontmatter
-    const biggestImage:PrintImageProps|undefined = [...images].sort((a:PrintImageProps,b:PrintImageProps)=>{
+    const biggestImage = [...images].sort((a,b)=>{
         const aWidth = a.childImageSharp.original.width,
             bWidth = b.childImageSharp.original.width;
         return aWidth-bWidth;

@@ -102,7 +102,7 @@ a{
         padding: 8px 0 8px 0;
         text-indent: 12px;
         line-height: 1.125em;
-        margin: -9px 0 -10px 1em;
+        margin: -9px 0 -10px 0;
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
@@ -320,6 +320,25 @@ a{
         bottom: 0;
         top: auto;
       }
+    }
+  }
+}
+
+.prints--masonry{
+  //display: flex;
+  //flex-wrap: wrap;
+  &, > div{
+    gap: 10px !important;
+
+  }
+  > div{
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      flex: 1;
+      min-height: 40px;
+      background: #B300DA;
     }
   }
 }

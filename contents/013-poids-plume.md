@@ -4,6 +4,7 @@ title_en: Feather of truth
 week: 13
 date: 2022-04-25
 date_to: 2022-05-01
+poster: images/013-1.jpg
 images: [images/013-1.jpg, images/013-2.jpg]
 videos: 
 hashtags: [1printaweek]

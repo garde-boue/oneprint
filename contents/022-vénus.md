@@ -4,6 +4,7 @@ title_en: Venus in the bath
 week: 22
 date: 2022-06-27
 date_to: 2022-07-03
+poster: images/022.jpg
 images: [images/022.jpg]
 videos: 
 hashtags: [1printaweek]

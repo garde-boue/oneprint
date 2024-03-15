@@ -4,6 +4,7 @@ title_en: eat the sea weed
 week: 12
 date: 2022-04-18
 date_to: 2022-04-24
+poster: images/012.jpg
 images: [images/012.jpg]
 videos: 
 hashtags: [1printaweek]

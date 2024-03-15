@@ -4,6 +4,7 @@ title_en: (Camomiles in the car)
 week: 4
 date: 2022-02-21
 date_to: 2022-02-27
+poster: images/004-1.jpg
 images: [images/004-1.jpg,images/004-2.jpg]
 instagram: https://www.instagram.com/p/CacL5x-IAeL/
 hashtags: [camomille,risographie,flowerpower,faiteslamourpaslaguerre,anneemiliephilippe,1printaweek,1paw]

@@ -1428,6 +1428,7 @@ type MarkdownRemarkFrontmatter = {
   readonly id: Maybe<Scalars['String']>;
   readonly images: Maybe<ReadonlyArray<Maybe<File>>>;
   readonly instagram: Maybe<Scalars['String']>;
+  readonly poster: Maybe<File>;
   readonly preview: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
   readonly title_en: Maybe<Scalars['String']>;
@@ -1465,6 +1466,7 @@ type MarkdownRemarkFrontmatterFieldSelector = {
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly images: InputMaybe<FileFieldSelector>;
   readonly instagram: InputMaybe<FieldSelectorEnum>;
+  readonly poster: InputMaybe<FileFieldSelector>;
   readonly preview: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
   readonly title_en: InputMaybe<FieldSelectorEnum>;
@@ -1486,6 +1488,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly images: InputMaybe<FileFilterListInput>;
   readonly instagram: InputMaybe<StringQueryOperatorInput>;
+  readonly poster: InputMaybe<FileFilterInput>;
   readonly preview: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly title_en: InputMaybe<StringQueryOperatorInput>;
@@ -1507,6 +1510,7 @@ type MarkdownRemarkFrontmatterSortInput = {
   readonly id: InputMaybe<SortOrderEnum>;
   readonly images: InputMaybe<FileSortInput>;
   readonly instagram: InputMaybe<SortOrderEnum>;
+  readonly poster: InputMaybe<FileSortInput>;
   readonly preview: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
   readonly title_en: InputMaybe<SortOrderEnum>;
@@ -2930,7 +2934,19 @@ type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 type IndexPageQuery = { readonly index: { readonly html: string | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly prints: { readonly nodes: ReadonlyArray<{ readonly html: string | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly title_en: string | null, readonly week: number | null, readonly instagram: string | null, readonly hashtags: ReadonlyArray<string | null> | null, readonly date_to: string | null, readonly video_path: string | null, readonly video_poster: string | null, readonly video_width: number | null, readonly video_height: number | null, readonly video_muted: boolean | null, readonly video_loop: boolean | null, readonly video_autoplay: boolean | null, readonly video_controls: boolean | null, readonly og_published_time: string | null, readonly date_from: string | null, readonly date_published: string | null, readonly images: ReadonlyArray<{ readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly og_image: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly width: number | null, readonly height: number | null } | null } | null } | null> | null } | null }> } };
 
+type MasonryPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MasonryPageQuery = { readonly index: { readonly frontmatter: { readonly title: string | null } | null } | null, readonly prints: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly week: number | null, readonly poster: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
+
 type PrintFragment = { readonly html: string | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly title_en: string | null, readonly week: number | null, readonly instagram: string | null, readonly hashtags: ReadonlyArray<string | null> | null, readonly date_to: string | null, readonly video_path: string | null, readonly video_poster: string | null, readonly video_width: number | null, readonly video_height: number | null, readonly video_muted: boolean | null, readonly video_loop: boolean | null, readonly video_autoplay: boolean | null, readonly video_controls: boolean | null, readonly og_published_time: string | null, readonly date_from: string | null, readonly date_published: string | null, readonly images: ReadonlyArray<{ readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly og_image: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly width: number | null, readonly height: number | null } | null } | null } | null> | null } | null };
+
+type PrintPosterFragment = { readonly frontmatter: { readonly week: number | null, readonly poster: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null };
+
+type WeekSelectorQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type WeekSelectorQuery = { readonly prints: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly week: number | null, readonly title: string | null, readonly title_en: string | null } | null }> } };
 
 
 }

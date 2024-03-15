@@ -5,7 +5,7 @@ week: 8
 date: 2022-03-21
 date_to: 2022-03-28
 preview: ignore
-
+poster: images/008-1.jpg
 images: [images/008-1.jpg]
 
 video_path: /video/008-2.mp4

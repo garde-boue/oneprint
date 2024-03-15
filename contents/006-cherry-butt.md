@@ -3,6 +3,7 @@ title_en: Cherry butt
 week: 6
 date: 2022-03-07
 date_to: 2022-03-13
+poster: images/006-1.jpg
 images: [images/006-1.jpg,images/006-2.jpg]
 instagram:
 hashtags: [1printaweek,anneemiliephilippe]

@@ -4,6 +4,7 @@ title_en: seaweeds
 week: 37
 date: 2023-11-20
 date_to: 2023-11-27
+poster: images/028.jpg
 images: [images/028.jpg]
 videos: 
 hashtags: [1printaweek]
